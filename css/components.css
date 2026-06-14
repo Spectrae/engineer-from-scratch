@@ -1,0 +1,236 @@
+/* Cards */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.card-title {
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.card-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+}
+
+/* Progress Bars */
+.progress-container {
+    width: 100%;
+    margin: var(--spacing-md) 0;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-secondary);
+}
+
+.progress-track {
+    width: 100%;
+    height: 6px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+    width: 0%; /* Dynamic */
+    transition: width 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--card-bg);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+}
+/* ... (Keep existing Cards, Progress Bars, Buttons from Stage 3) ... */
+
+/* Custom Checkboxes */
+.checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    cursor: pointer;
+}
+
+.checkbox-input {
+    display: none; /* Hide native checkbox */
+}
+
+.checkbox-custom {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all var(--transition-fast);
+}
+
+.checkbox-input:checked + .checkbox-custom {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+    content: "";
+    width: 4px;
+    height: 8px;
+    border: solid var(--bg-color);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+}
+
+.checkbox-label {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.checkbox-input:checked ~ .checkbox-label {
+    color: var(--text-secondary);
+    text-decoration: line-through;
+}
+
+/* Badges / Tags */
+.badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    border-radius: 2px;
+}
+
+.badge.accent {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+/* ... (Keep existing styles from previous stages) ... */
+
+/* Search Bar */
+.search-container {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 var(--spacing-xl);
+}
+
+.search-input {
+    width: 100%;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    transition: border-color var(--transition-fast);
+}
+
+.search-input:focus {
+    border-color: var(--accent-color);
+}
+
+/* Bookmarks */
+.bookmark-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.bookmark-btn:hover, .bookmark-btn.active {
+    color: var(--accent-color);
+}
+
+.bookmark-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.bookmark-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm);
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+}
+
+.bookmark-item a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.bookmark-item a:hover {
+    color: var(--accent-color);
+}

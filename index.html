@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Learning Tracker</title>
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <!-- Inside <head> below dashboard.css -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/roadmap.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+                <header class="top-nav">
+                    <div class="nav-brand">
+                        <h1>> AI / FROM SCRATCH</h1>
+                    </div>
+                    
+                    <div class="search-container">
+                        <input type="text" id="global-search" class="search-input" placeholder="Search syllabus, projects, resources...">
+                    </div>
+        
+                    <nav class="nav-links">
+                        <a href="#/" class="nav-link active" data-route="/">Dashboard</a>
+                        <a href="#/tracks" class="nav-link" data-route="/tracks">Tracks</a>
+                        <a href="#/settings" class="nav-link" data-route="/settings">Settings</a>
+                    </nav>
+                </header>
+
+        <main id="app-root" class="main-content">
+            <!-- Dynamic view injected here by router -->
+            <section class="base-loading">
+                <p>Initializing systems...</p>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>Personal Learning Management System</p>
+            <p class="status">Progress Saved in Browser Only</p>
+        </footer>
+    </div>
+
+    <!-- Core App Logic -->
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>

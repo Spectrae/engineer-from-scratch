@@ -1,0 +1,26 @@
+:root {
+    /* Color Palette */
+    --bg-color: #050816;
+    --card-bg: #0b1022;
+    --border-color: #1a2240;
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+    --accent-color: #6d8cff;
+    --accent-hover: #5875e6;
+
+    /* Typography */
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Layout Variables */
+    --container-max-width: 1200px;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --border-radius: 4px;
+    
+    /* Animation */
+    --transition-fast: 150ms ease-in-out;
+}

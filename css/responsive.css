@@ -1,0 +1,60 @@
+/* Mobile Optimization - Breakpoint 768px */
+@media (max-width: 768px) {
+    :root {
+        --spacing-xl: 1rem; /* Reduce global padding */
+    }
+
+    /* Top Navigation */
+    .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: var(--spacing-sm);
+    }
+
+    .search-container {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Layouts */
+    .dashboard-layout > div {
+        grid-template-columns: 1fr !important; /* Stack columns on mobile */
+    }
+
+    .track-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: var(--spacing-md);
+    }
+
+    .track-stats {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    /* Expandable Roadmap */
+    .expandable-title h3 {
+        font-size: 0.9rem;
+    }
+
+    .expandable-content {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .week-container {
+        padding-left: var(--spacing-sm);
+    }
+
+    /* Cards */
+    .card {
+        padding: var(--spacing-md);
+    }
+}

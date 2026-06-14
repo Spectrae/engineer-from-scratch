@@ -1,0 +1,1707 @@
+{
+  "trackId": "track_a",
+  "trackName": "Full-Stack Engineering",
+  "stages": [
+    {
+      "stageId": "stage_1",
+      "stageTitle": "STAGE 1: The Foundation / The Engine & Environment",
+      "weeks": [
+        {
+          "weekId": "week_1",
+          "weekTitle": "WEEK 1: Command Line, Git, and Web Primitives",
+          "focus": "Terminal commands, Git version control, HTML5, and CSS3 (Flexbox/Grid).",
+          "concepts": [
+            "CLI Basics (Navigation, File Manipulation)",
+            "Git & GitHub (Init, Add, Commit, Push, Branching)",
+            "Semantic HTML5 (Structure, Accessibility)",
+            "CSS3 (Box Model, Flexbox, Grid, Variables)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. CLI & Git Sandbox",
+              "conceptLearned": "Terminal & Git Fundamentals.",
+              "whatToBuild": "A local text-based file system tree tracked via Git.",
+              "conceptsUsed": "mkdir, cd, git init, git add, git commit, git checkout -b.",
+              "action": "After learning CLI/Git -> Build a local repository with 5 linked text files, create a new branch, modify a file, and merge it. Push to GitHub. Write a README detailing what commands failed initially."
+            },
+            {
+              "title": "2. Linktree Clone",
+              "conceptLearned": "Semantic HTML & Flexbox.",
+              "whatToBuild": "A responsive profile page with multiple external links.",
+              "conceptsUsed": "<a>, <main>, flex-direction: column, align-items, :hover states.",
+              "action": "After learning Flexbox -> Build a Linktree clone. Host it on GitHub Pages."
+            },
+            {
+              "title": "3. Static Analytics Dashboard",
+              "conceptLearned": "CSS Grid.",
+              "whatToBuild": "A dashboard layout with a sidebar, header, and a 3x3 grid of \"metric\" cards.",
+              "conceptsUsed": "display: grid, grid-template-columns, grid-template-areas.",
+              "action": "After learning CSS Grid -> Build the Dashboard layout. No JavaScript yet, just pure structure."
+            },
+            {
+              "title": "4. Semantic Profile",
+              "conceptLearned": "HTML/CSS Fast Track.",
+              "whatToBuild": "Create a 1-page HTML document about yourself. Use Flexbox to center a main card. No external CSS libraries.",
+              "conceptsUsed": "Semantic structure, element positioning.",
+              "action": "Build the Semantic Profile."
+            }
+          ],
+          "advancedProject": {
+            "title": "Personal Portfolio V1 (Static)",
+            "techStack": "HTML5, CSS3.",
+            "features": "About section, Projects grid (placeholders), Contact form UI.",
+            "conceptsUsed": "Semantic markup, CSS Grid for layout, Flexbox for alignment, CSS Variables for theming (Light/Dark mode via CSS classes)."
+          },
+          "openSource": {
+            "whatToContribute": "Documentation improvements.",
+            "whatToChange": "Add yourself to a contributor list to learn the strict PR workflow.",
+            "contributionFlow": "1. Fork repo. 2. Create branch (git checkout -b add-my-name). 3. Make change. 4. Commit with clear message. 5. Create Pull Request.",
+            "whereToContribute": "firstcontributions/first-contributions on GitHub."
+          },
+          "resources": [
+            {
+              "url": "https://git-scm.com/doc",
+              "read": "Chapters 1 (Getting Started) and 2 (Git Basics).",
+              "skip": "Chapters on Git Internals and Server setup."
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout",
+              "read": "Flexbox and Grids sections.",
+              "skip": "Floats, Positioning (skim only), Legacy layout methods."
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML",
+              "read": "Getting Started and HTML text fundamentals.",
+              "skip": "Multimedia and embedding."
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox",
+              "read": "Read entirely. Flexbox is the only layout tool you need right now.",
+              "skip": "CSS Grid, animations, and transitions."
+            },
+            {
+              "url": "https://git-scm.com/book/en/v2",
+              "read": "Chapter 1 (Getting Started) and Chapter 2 (Git Basics).",
+              "skip": ""
+            }
+          ]
+        },
+        {
+          "weekId": "week_2",
+          "weekTitle": "WEEK 2: JavaScript Core, DOM, and Node.js Intro",
+          "focus": "Variables, Datatypes, Functions, Arrays, Objects, connecting JS to HTML via the DOM, and transitioning to Node.js.",
+          "concepts": [
+            "JS Execution Context & Variables (let, const)",
+            "Data Structures (Arrays, Objects)",
+            "Functions (Arrow functions, callbacks)",
+            "DOM Selection & Manipulation",
+            "Event Listeners & LocalStorage",
+            "The Event Loop",
+            "Node.js vs Browser JS",
+            "Node.js File System (fs/promises)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. CLI String Manipulator",
+              "conceptLearned": "JS Basics & Functions.",
+              "whatToBuild": "A simple Node script that takes a string and returns it reversed, capitalized, and counted.",
+              "conceptsUsed": "String.prototype.split, reverse, join, Arrow Functions.",
+              "action": "After learning JS Functions -> Build String Manipulator. Run it in terminal using node app.js."
+            },
+            {
+              "title": "2. Interactive To-Do List",
+              "conceptLearned": "DOM Manipulation & Event Listeners.",
+              "whatToBuild": "A web app to add, delete, and mark tasks as complete.",
+              "conceptsUsed": "document.querySelector, addEventListener, createElement, classList.toggle.",
+              "action": "After learning the DOM -> Build the To-Do List."
+            },
+            {
+              "title": "3. Expense Tracker (UI + Local Data)",
+              "conceptLearned": "Arrays, Objects, & LocalStorage.",
+              "whatToBuild": "An app that accepts an expense name and amount, stores it in LocalStorage, and updates the total budget.",
+              "conceptsUsed": "JSON.stringify(), JSON.parse(), Array.prototype.reduce().",
+              "action": "After learning Arrays/Objects -> Build Expense Tracker. Ensure data persists on page refresh."
+            },
+            {
+              "title": "4. CLI Calculator",
+              "conceptLearned": "JS Basics.",
+              "whatToBuild": "Write a Node.js script using the built-in readline module that takes two numbers and an operator from the terminal and returns the result.",
+              "conceptsUsed": "Node.js readline module.",
+              "action": "Build the CLI Calculator."
+            },
+            {
+              "title": "5. File Promise Wrapper",
+              "conceptLearned": "Async JS & Node.",
+              "whatToBuild": "Create a script that reads a text file using callbacks (fs.readFile), wraps that callback in a custom Promise, and consumes it using async/await to print contents.",
+              "conceptsUsed": "fs.readFile, Promises, async/await.",
+              "action": "Build the File Promise Wrapper."
+            }
+          ],
+          "advancedProject": {
+            "title": "Client-Side Kanban Board",
+            "techStack": "HTML, CSS, JavaScript (No frameworks).",
+            "features": "Drag and drop tasks between \"To Do\", \"In Progress\", and \"Done\" columns. Persist data in LocalStorage.",
+            "conceptsUsed": "HTML5 Drag and Drop API, complex object state management, dynamic DOM rendering."
+          },
+          "milestoneProject": {
+            "title": "Milestone Project 1: The CLI Task Tracker",
+            "goal": "Build a Command Line Interface (CLI) application in Node.js that lets a user add, list, update, and delete tasks.",
+            "requirements": "Constraint: You cannot use a database yet. You must store the tasks in a local tasks.json file using the fs/promises module. Every time you run a command, it must read the JSON, update the array, and write it back to the file."
+          },
+          "openSource": {
+            "whatToContribute": "Fixing dead links / formatting.",
+            "whatToChange": "Find broken links in popular list repositories and submit a PR with the corrected link.",
+            "contributionFlow": "Fork -> Branch (fix-broken-link-css) -> Change -> Commit -> PR.",
+            "whereToContribute": "MunGell/awesome-for-beginners (look for the HTML/CSS or Markdown repos)."
+          },
+          "resources": [
+            {
+              "url": "https://javascript.info/",
+              "read": "Part 1 (Fundamentals, Objects, Data Types, Advanced Work with Functions). Chapters 2 through 6. Focus heavily on Objects, Closures, and Scope.",
+              "skip": "Generators, Modules, Promisification, Document, Events, Interfaces."
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction",
+              "read": "Core interfaces in the DOM.",
+              "skip": "Obsolete methods, SVG interfaces."
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop",
+              "read": "Read entirely.",
+              "skip": ""
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=8aGhZQkoFbQ (Example Philip Roberts/Harkirat Singh)",
+              "read": "Watch 'What the heck is the event loop anyway?'. Watch one, then close YouTube.",
+              "skip": ""
+            },
+            {
+              "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
+              "read": "Introduction to Node.js, How Node.js exits, Difference between Node.js and the Browser.",
+              "skip": ""
+            },
+            {
+              "url": "https://nodejs.org/api/fs.html",
+              "read": "Read the documentation for fs/promises.",
+              "skip": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_2",
+      "stageTitle": "STAGE 2: Asynchronous Systems, Network & APIs",
+      "weeks": [
+        {
+          "weekId": "week_3",
+          "weekTitle": "WEEK 3: Async JS, HTTP, and Express.js",
+          "focus": "Handling asynchronous operations, understanding HTTP protocols, and building your first backend servers.",
+          "concepts": [
+            "Asynchronous JavaScript (Promises, async/await, Event Loop)",
+            "Fetch API & HTTP Methods (GET, POST, PUT, DELETE)",
+            "Node.js & Express.js Basics (Routing, Middleware)",
+            "HTTP Messages, Headers, Bodies, Status Codes"
+          ],
+          "microProjects": [
+            {
+              "title": "1. Public API Explorer",
+              "conceptLearned": "Async/Await & Fetch.",
+              "whatToBuild": "A CLI tool that fetches data from the GitHub API and logs a user's repository count and bio.",
+              "conceptsUsed": "fetch, async/await, JSON parsing, Error handling (try/catch).",
+              "action": "After learning Async JS -> Build the API Explorer. If the user doesn't exist, handle the 404 error gracefully."
+            },
+            {
+              "title": "2. Simple Notes API",
+              "conceptLearned": "Express.js & HTTP Methods.",
+              "whatToBuild": "A REST API to create, read, update, and delete text notes (stored in memory/array).",
+              "conceptsUsed": "express(), app.get(), app.post(), req.body, HTTP Status Codes.",
+              "action": "After learning Express -> Build the Notes API. Test it using Postman or cURL."
+            },
+            {
+              "title": "3. In-Memory REST API",
+              "conceptLearned": "Express Routing.",
+              "whatToBuild": "Build an Express server with 4 routes (GET, POST, PUT, DELETE) that manages an array of \"Users\" in memory. Use Postman to test routes.",
+              "conceptsUsed": "Express routes.",
+              "action": "Build the In-Memory REST API."
+            },
+            {
+              "title": "4. The Microservice Handshake (The Glue)",
+              "conceptLearned": "Inter-service Communication.",
+              "whatToBuild": "Modify Node.js/Express server to have route /api/ai-data. Use fetch() to call Python FastAPI server running on port 8000, retrieve JSON, and send it back to the user.",
+              "conceptsUsed": "fetch() in Node.js, cross-origin communication.",
+              "action": "Bridge Track A and Track B."
+            }
+          ],
+          "advancedProject": {
+            "title": "Cross-Language Integration System",
+            "techStack": "Node.js, Express, Python, FastAPI.",
+            "features": "Frontend HTML form -> Node.js backend -> Internal API call to FastAPI -> Returns sentiment score -> Node.js back to frontend.",
+            "conceptsUsed": "Microservices communication, CORS, Server-to-Server HTTP requests via Node fetch."
+          },
+          "openSource": {
+            "whatToContribute": "Feature additions (Small scale) & Repository reading.",
+            "whatToChange": "Add a missing endpoint variation in a beginner Node.js repository. Also, find 2 repos using Express.js and read their code and folder structure.",
+            "contributionFlow": "Fork -> Branch -> Write Code -> Test -> PR.",
+            "whereToContribute": "GitHub issues labeled good first issue AND node, Good First Issue site."
+          },
+          "resources": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous",
+              "read": "How async JS works, Promises, async/await.",
+              "skip": "Workers."
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview",
+              "read": "Overview, HTTP Messages, HTTP request methods (GET, POST, PUT, DELETE).",
+              "skip": ""
+            },
+            {
+              "url": "https://expressjs.com/en/starter/hello-world.html",
+              "read": "Hello world and Basic routing.",
+              "skip": ""
+            },
+            {
+              "url": "https://expressjs.com/en/guide/writing-middleware.html",
+              "read": "Read this twice. Middleware is the heart of backend architecture.",
+              "skip": ""
+            }
+          ]
+        },
+        {
+          "weekId": "week_4",
+          "weekTitle": "WEEK 4: Databases (NoSQL & SQL)",
+          "focus": "Storing persistent data and managing database connections in Node.js.",
+          "concepts": [
+            "MongoDB (NoSQL) & Mongoose ORM",
+            "PostgreSQL (Relational) & Basic SQL Queries (SELECT, INSERT, JOIN)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. MongoDB CRUD API",
+              "conceptLearned": "NoSQL & Mongoose.",
+              "whatToBuild": "Upgrade Week 3's Notes API to save notes permanently in MongoDB.",
+              "conceptsUsed": "Mongoose Schemas, Model.find(), Model.create().",
+              "action": "After learning MongoDB -> Build the CRUD API."
+            },
+            {
+              "title": "2. SQL Schema Architect",
+              "conceptLearned": "PostgreSQL & Table Relations.",
+              "whatToBuild": "Write raw SQL scripts to create a users table and a posts table, then fetch a user and all their posts.",
+              "conceptsUsed": "CREATE TABLE, FOREIGN KEY, INNER JOIN.",
+              "action": "After learning SQL basics -> Build the Schema Architect."
+            },
+            {
+              "title": "3. The CRUD Logger",
+              "conceptLearned": "MongoDB Integration.",
+              "whatToBuild": "Build an Express server connected to MongoDB via Mongoose. Create a Log model (String message, Date timestamp). Create routes to POST a new log and GET all logs.",
+              "conceptsUsed": "Mongoose schema generation.",
+              "action": "Build the CRUD Logger."
+            },
+            {
+              "title": "4. The AI Audit Trail (The Glue)",
+              "conceptLearned": "Stateful Microservices.",
+              "whatToBuild": "Update the microservice handshake. When user hits Node.js /api/ai-data, call FastAPI. Node takes prediction, saves it to MongoDB Atlas as an 'AuditRecord', and returns success.",
+              "conceptsUsed": "Asynchronous Orchestration.",
+              "action": "Build the AI Audit Trail."
+            }
+          ],
+          "advancedProject": {
+            "title": "AI Feedback Logger System",
+            "techStack": "Node.js, Express, MongoDB, FastAPI, Python.",
+            "features": "Node server queries FastAPI for classification, Node saves both text and classification to MongoDB.",
+            "conceptsUsed": "API composition, Database persistence, Error handling."
+          },
+          "milestoneProject": {
+            "title": "Milestone Project 2: The Persistent Todo API",
+            "goal": "A complete, production-ready backend API for a Todo application.",
+            "requirements": "Express.js, MongoDB Atlas with Mongoose. User schema and Todo schema. Full CRUD routes. Standardized JSON error handling. No frontend yet. Document how to use in README.md."
+          },
+          "openSource": {
+            "whatToContribute": "Test cases & Server spinning.",
+            "whatToChange": "Add unit tests to untested utility functions. Clone a well-maintained open-source Node/Express project, run npm install, and successfully start their server locally.",
+            "contributionFlow": "Fork -> Branch -> Write tests -> Commit -> PR.",
+            "whereToContribute": "Repos using Jest, awesome-nodejs bugs."
+          },
+          "resources": [
+            {
+              "url": "https://www.mongodb.com/docs/manual/crud/",
+              "read": "Insert, Query, Update, and Delete Documents.",
+              "skip": ""
+            },
+            {
+              "url": "https://mongoosejs.com/docs/guide.html",
+              "read": "Schemas, Models, Queries.",
+              "skip": "Middleware, Plugins, Population."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_3",
+      "stageTitle": "STAGE 3: Type Safety & Strict Schemas",
+      "weeks": [
+        {
+          "weekId": "week_5",
+          "weekTitle": "WEEK 5: TypeScript and Prisma ORM",
+          "focus": "Enforcing strict data types in your backend, replacing raw SQL/Mongoose with Prisma ORM.",
+          "concepts": [
+            "TypeScript Fundamentals (Static typing, Interfaces, Generics, Enums)",
+            "Compiling TS to JS (tsc, tsconfig.json)",
+            "Prisma ORM (Schema definition, Migrations, Prisma Client)",
+            "Type-Safe Microservices Interfaces"
+          ],
+          "microProjects": [
+            {
+              "title": "1. Type-Safe Notes API",
+              "conceptLearned": "TypeScript & Express.",
+              "whatToBuild": "Rewrite your Express.js backend entirely in TypeScript.",
+              "conceptsUsed": "npm install typescript @types/node @types/express.",
+              "action": "After learning TS Basics -> Build the Type-Safe Notes API."
+            },
+            {
+              "title": "2. Prisma Blog Schema",
+              "conceptLearned": "Prisma ORM.",
+              "whatToBuild": "Define a relational schema with Users and Posts. Run migrations.",
+              "conceptsUsed": "schema.prisma, npx prisma migrate dev.",
+              "action": "After learning Prisma -> Build the Database Seeder."
+            },
+            {
+              "title": "3. The Typed SQL API",
+              "conceptLearned": "Prisma PostgreSQL Integration.",
+              "whatToBuild": "Rebuild Express server. Use tsc to compile. Connect to Neon/Supabase Postgres via Prisma. Create User/Post relations. Build GET/POST routes.",
+              "conceptsUsed": "PrismaClient.",
+              "action": "Build the Typed SQL API."
+            },
+            {
+              "title": "4. The Type-Safe Analyzer (The Glue)",
+              "conceptLearned": "Strict Type Contracts.",
+              "whatToBuild": "Create a TS Express route that sends text to FastAPI, enforces the AIResponse type on the result, and saves text and sentiment score into Postgres via Prisma.",
+              "conceptsUsed": "TypeScript Interfaces.",
+              "action": "Build the Analyzer."
+            }
+          ],
+          "advancedProject": {
+            "title": "Type-Safe AI Router",
+            "techStack": "Node.js (TypeScript), Express, Prisma, PostgreSQL, FastAPI.",
+            "features": "TS backend receives payload, validates using TS interfaces, saves to PostgreSQL, forwards to FastAPI.",
+            "conceptsUsed": "Strict End-to-End typing, DB Transactions."
+          },
+          "openSource": {
+            "whatToContribute": "Type Definitions.",
+            "whatToChange": "Add missing TS interfaces to a JS repository. Look at Prisma's schema.prisma examples in their test folders to see how world-class engineers write types.",
+            "contributionFlow": "Fork -> Branch -> Write Types -> PR.",
+            "whereToContribute": "DefinitelyTyped, Prisma GitHub repository."
+          },
+          "resources": [
+            {
+              "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+              "read": "The Basics, Everyday Types, Narrowing.",
+              "skip": "Classes, Decorators."
+            },
+            {
+              "url": "https://www.prisma.io/docs/getting-started",
+              "read": "Quickstart, Schema Modeling, Prisma Client queries.",
+              "skip": "Prisma Studio."
+            },
+            {
+              "url": "https://www.postgresqltutorial.com/",
+              "read": "Section 1 (Querying Data) and Section 4 (Managing Tables). Understand SELECT, JOIN, CREATE TABLE, foreign keys.",
+              "skip": ""
+            }
+          ]
+        },
+        {
+          "weekId": "week_6",
+          "weekTitle": "WEEK 6: Authentication & Monorepos",
+          "focus": "Securing routes, organizing complex codebases into workspaces.",
+          "concepts": [
+            "User Authentication (JWT, bcrypt)",
+            "Monorepo Architecture (Turborepo Workspaces)",
+            "Bun Runtime Initialization"
+          ],
+          "microProjects": [
+            {
+              "title": "1. Secure Auth Flow",
+              "conceptLearned": "Authentication & Passwords.",
+              "whatToBuild": "A Node/TS server with /signup (hashes password) and /login (verifies hash, returns JWT).",
+              "conceptsUsed": "bcrypt, jwt.sign, Custom Auth Middleware.",
+              "action": "After learning JWT -> Build the Auth Flow. Protect a /me route."
+            },
+            {
+              "title": "2. Turborepo Scaffold",
+              "conceptLearned": "Monorepos.",
+              "whatToBuild": "Set up a Turborepo containing apps/api and packages/db.",
+              "conceptsUsed": "package.json workspaces, turbo.json pipeline.",
+              "action": "After learning Turborepo -> Scaffold your workspace."
+            },
+            {
+              "title": "3. The Bun/Turbo Monorepo",
+              "conceptLearned": "Bun Package Management.",
+              "whatToBuild": "Initialize new Turborepo using Bun as package manager. Create apps/api and packages/types. Import a type from packages/types into apps/api.",
+              "conceptsUsed": "bun init, turbo, shared types.",
+              "action": "Build the Monorepo."
+            }
+          ],
+          "advancedProject": {
+            "title": "Authenticated AI Image Service",
+            "techStack": "Turborepo, Node.js (TS), Prisma, JWT, FastAPI, PyTorch.",
+            "features": "User logs in, sends image. Node validates JWT, sends to FastAPI. FastAPI processes image and returns digit.",
+            "conceptsUsed": "Auth Middleware, File Handling, Model Inference."
+          },
+          "openSource": {
+            "whatToContribute": "Security/Auth improvements.",
+            "whatToChange": "Implement missing JWT validation check.",
+            "contributionFlow": "Fork -> Branch -> Code -> PR.",
+            "whereToContribute": "Backend boilerplates."
+          },
+          "resources": [
+            {
+              "url": "https://jwt.io/introduction",
+              "read": "Introduction (What is JSON Web Token, How does it work).",
+              "skip": "Library implementations."
+            },
+            {
+              "url": "https://turbo.build/repo/docs/core-concepts",
+              "read": "Monorepos, Workspaces, Caching. Understand turbo.json pipeline.",
+              "skip": "Remote Caching."
+            },
+            {
+              "url": "https://bun.sh/docs",
+              "read": "What is Bun?, bun install, bun run.",
+              "skip": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_4",
+      "stageTitle": "STAGE 4: Client Architecture",
+      "weeks": [
+        {
+          "weekId": "week_7",
+          "weekTitle": "WEEK 7: React Fundamentals & Tailwind CSS",
+          "focus": "Shifting to declarative UI building with React.js and styling with Tailwind.",
+          "concepts": [
+            "React Basics (JSX, Virtual DOM)",
+            "Components & Props (Modular UI)",
+            "Basic State (useState)",
+            "Rendering Lists",
+            "Tailwind CSS Core Concepts"
+          ],
+          "microProjects": [
+            {
+              "title": "1. Component Sandbox",
+              "conceptLearned": "JSX, Components, Props.",
+              "whatToBuild": "A static React page composed of reusable <Card /> components.",
+              "conceptsUsed": "export default function, props, map().",
+              "action": "Build the Sandbox using Vite."
+            },
+            {
+              "title": "2. Dynamic Data Table",
+              "conceptLearned": "React State (useState).",
+              "whatToBuild": "Table of user data with a real-time search bar.",
+              "conceptsUsed": "useState, onChange, filter().",
+              "action": "Build the Dynamic Table."
+            },
+            {
+              "title": "3. The React Dashboard",
+              "conceptLearned": "Vite + Tailwind Integration.",
+              "whatToBuild": "Inside Turborepo, create apps/web using Vite+React+TS+Tailwind. Build a dashboard with sidebar and main content area. Fetch data from existing Node Todo API and render tasks.",
+              "conceptsUsed": "Vite, Tailwind utilities.",
+              "action": "Build the React Dashboard."
+            }
+          ],
+          "advancedProject": {
+            "title": "React-Node-AI Pipeline",
+            "techStack": "React (Vite), Node.js (TS), Express, FastAPI.",
+            "features": "React frontend sends text to Node API. Node logs request, forwards to FastAPI. FastAPI returns attention score, React renders bar chart.",
+            "conceptsUsed": "Full-stack wiring, CORS, React controlled components."
+          },
+          "openSource": {
+            "whatToContribute": "UI adjustments.",
+            "whatToChange": "Fix accessibility issues in a React component library. Study shadcn/ui to see how world-class frontend engineers combine React properties, Tailwind utilities, and TS interfaces.",
+            "contributionFlow": "Fork -> Branch -> Code -> PR.",
+            "whereToContribute": "chakra-ui, mui, shadcn/ui."
+          },
+          "resources": [
+            {
+              "url": "https://react.dev/learn",
+              "read": "Describing the UI, Adding Interactivity, Managing State. Pay extreme attention to useState and useEffect.",
+              "skip": "Escape Hatches."
+            },
+            {
+              "url": "https://tailwindcss.com/docs/utility-first",
+              "read": "Utility-First Fundamentals, Handling Hover, Focus, Responsive Design.",
+              "skip": ""
+            }
+          ]
+        },
+        {
+          "weekId": "week_8",
+          "weekTitle": "WEEK 8: Advanced React & Routing",
+          "focus": "Connecting React to your backend APIs asynchronously.",
+          "concepts": [
+            "Component Lifecycle (useEffect)",
+            "Data Fetching in React",
+            "Client-Side Routing (React Router)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. Async Feed Reader",
+              "conceptLearned": "useEffect & Fetch.",
+              "whatToBuild": "React component that fetches a list of posts from Node API on initial load.",
+              "conceptsUsed": "useEffect, async/await.",
+              "action": "Build the Feed Reader. Trigger deliberate error to practice handling state."
+            },
+            {
+              "title": "2. Multi-Page SPA",
+              "conceptLearned": "React Router.",
+              "whatToBuild": "Add navigation to Vite app with three pages: Home, Dashboard, Login.",
+              "conceptsUsed": "<BrowserRouter>, <Routes>.",
+              "action": "Build the SPA."
+            },
+            {
+              "title": "3. The Agentic Chat UI (The Glue)",
+              "conceptLearned": "Full-Stack Loop.",
+              "whatToBuild": "Build a simple chat interface in React app. Connect through Node.js to Python Agent. Manage loading states in React.",
+              "conceptsUsed": "Full-Stack orchestration.",
+              "action": "Build the Chat UI."
+            }
+          ],
+          "advancedProject": {
+            "title": "Production-Grade Sentiment Analyzer",
+            "techStack": "React, React Router, Node.js (TS), FastAPI, HuggingFace.",
+            "features": "React UI fetches text. Node validates, FastAPI uses HuggingFace to get sentiment, saves to PostgreSQL, returns to React.",
+            "conceptsUsed": "Pre-trained AI integration, complex state management."
+          },
+          "openSource": {
+            "whatToContribute": "Bug fixes in hooks.",
+            "whatToChange": "Solve infinite re-render due to missing dependency array.",
+            "contributionFlow": "Fork -> Branch -> Debug -> PR.",
+            "whereToContribute": "React router repos."
+          },
+          "resources": [
+            {
+              "url": "https://react.dev/learn/synchronizing-with-effects",
+              "read": "Synchronizing with Effects, You Might Not Need an Effect.",
+              "skip": "Custom Hooks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_5",
+      "stageTitle": "STAGE 5: Production Meta-Frameworks",
+      "weeks": [
+        {
+          "weekId": "week_9",
+          "weekTitle": "WEEK 9: Next.js App Router",
+          "focus": "Moving from vanilla React to Next.js for SSR.",
+          "concepts": [
+            "Next.js App Router Architecture",
+            "Server Components vs. Client Components",
+            "Data Fetching in Next.js",
+            "Migrating to Bun Runtime"
+          ],
+          "microProjects": [
+            {
+              "title": "1. Next.js App Scaffold",
+              "conceptLearned": "Next.js Routing.",
+              "whatToBuild": "Next.js app with nested routes and persistent layout.",
+              "conceptsUsed": "app/layout.tsx, app/page.tsx.",
+              "action": "Build the Scaffold."
+            },
+            {
+              "title": "2. Bun API Migration",
+              "conceptLearned": "Bun Runtime.",
+              "whatToBuild": "Run existing TS Express API using Bun instead of Node.",
+              "conceptsUsed": "bun run.",
+              "action": "Migrate your backend."
+            },
+            {
+              "title": "3. The Server-Rendered Dashboard",
+              "conceptLearned": "Server Components.",
+              "whatToBuild": "Initialize Next.js app in Turborepo. Rebuild React Todo dashboard. Fetch initial list of Todos directly in a Server Component using Prisma. Use Client Components only for buttons.",
+              "conceptsUsed": "npx create-next-app, Prisma direct fetching.",
+              "action": "Build Server-Rendered Dashboard."
+            }
+          ],
+          "advancedProject": {
+            "title": "Semantic Search Engine V1",
+            "techStack": "Next.js, Bun, FastAPI, Python.",
+            "features": "Next.js queries Bun. Bun forwards to FastAPI to calculate embeddings and return top matches.",
+            "conceptsUsed": "Server-Side Rendering, Vector math."
+          },
+          "openSource": {
+            "whatToContribute": "Documentation.",
+            "whatToChange": "Fix outdated React Router patterns in Next.js boilerplates.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "Next.js templates."
+          },
+          "resources": [
+            {
+              "url": "https://nextjs.org/docs/app/building-your-application/routing",
+              "read": "Routing, Pages, Layouts.",
+              "skip": "Parallel Routes."
+            },
+            {
+              "url": "https://nextjs.org/docs/app/building-your-application/rendering",
+              "read": "Read Server Components and Client Components. Must know when to use 'use client'.",
+              "skip": ""
+            },
+            {
+              "url": "https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating",
+              "read": "Learn how fetch is extended in Next.js to handle caching.",
+              "skip": ""
+            }
+          ]
+        },
+        {
+          "weekId": "week_10",
+          "weekTitle": "WEEK 10: Server Actions & Architecture Integration",
+          "focus": "Building server actions and integrating RAG architecture into the Next.js framework.",
+          "concepts": [
+            "Next.js Server Actions",
+            "Handling File Uploads",
+            "Advanced Prisma"
+          ],
+          "microProjects": [
+            {
+              "title": "1. Next.js File Uploader",
+              "conceptLearned": "Server Actions.",
+              "whatToBuild": "Next.js form uploading a txt file to Bun backend.",
+              "conceptsUsed": "FormData, fs.writeFileSync.",
+              "action": "Build the Uploader."
+            },
+            {
+              "title": "2. Context Retriever Endpoint (The Glue)",
+              "conceptLearned": "Full-Stack RAG Connection.",
+              "whatToBuild": "Update FastAPI to return raw text chunks. Call this endpoint from your Turborepo Node.js backend.",
+              "conceptsUsed": "Cross-service fetching.",
+              "action": "Build Retriever Endpoint."
+            }
+          ],
+          "advancedProject": {
+            "title": "Full-Stack Document Q&A App",
+            "techStack": "Next.js, Bun, Prisma, FastAPI, ChromaDB.",
+            "features": "User uploads doc. Bun saves metadata, FastAPI chunks and stores in ChromaDB. User queries text from vector store.",
+            "conceptsUsed": "End-to-end RAG architecture."
+          },
+          "milestoneProject": {
+            "title": "Milestone Project 3: The Codeforces Clone (Skeleton Phase)",
+            "goal": "Begin building a competitive programming platform architecture.",
+            "requirements": "Monorepo, Next.js App Router, Express.js microservice. Postgres DB with Prisma tables for User, Problem, Submission. Build UI to list problems. Do not build code execution yet."
+          },
+          "openSource": {
+            "whatToContribute": "Tutorials.",
+            "whatToChange": "Add 'How to use with Bun' example to docs.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "Chroma repos."
+          },
+          "resources": [
+            {
+              "url": "https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations",
+              "read": "Forms and Mutations.",
+              "skip": "Optimistic Updates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_6",
+      "stageTitle": "STAGE 6: Real-Time Systems",
+      "weeks": [
+        {
+          "weekId": "week_11",
+          "weekTitle": "WEEK 11: WebSockets & WebRTC",
+          "focus": "Bidirectional real-time communication.",
+          "concepts": [
+            "Polling vs. WebSockets",
+            "Socket.io",
+            "Connecting Next.js to Bun WebSockets",
+            "Peer-to-Peer Networking and NAT Traversal",
+            "WebRTC (Web Real-Time Communication)",
+            "Media Capture API (getUserMedia)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. Echo Terminal",
+              "conceptLearned": "WebSockets.",
+              "whatToBuild": "Raw HTML client sending messages to Bun server via WS, broadcasting back.",
+              "conceptsUsed": "io.on, socket.emit.",
+              "action": "Build the Echo Terminal."
+            },
+            {
+              "title": "2. Live Cursor Tracker",
+              "conceptLearned": "Real-time events.",
+              "whatToBuild": "Next.js page showing multiple user cursors.",
+              "conceptsUsed": "mousemove listeners, throttling.",
+              "action": "Build the Tracker."
+            },
+            {
+              "title": "3. The Multi-Player Cursor Arena",
+              "conceptLearned": "Real-Time Broadcaasting.",
+              "whatToBuild": "Build Next.js page and Node.js/Socket.io server capturing (x,y) coordinates and emitting to server 10 times a second. Server broadcasts to all users.",
+              "conceptsUsed": "Socket.io",
+              "action": "Build Cursor Arena."
+            }
+          ],
+          "advancedProject": {
+            "title": "Real-Time Agentic Chatbot",
+            "techStack": "Next.js, Bun, Socket.io, FastAPI.",
+            "features": "WebSocket stream between Next.js and Bun. FastAPI generates response and streams tokens back.",
+            "conceptsUsed": "WebSocket streaming, Agentic execution."
+          },
+          "openSource": {
+            "whatToContribute": "WebSocket edge cases.",
+            "whatToChange": "Add connection retry logic to chat app. Study Excalidraw repo handling real-time sync.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "Socket.io boilerplates, Excalidraw."
+          },
+          "resources": [
+            {
+              "url": "https://socket.io/docs/v4/tutorial/introduction",
+              "read": "Initialization, Emitting Events. Entire tutorial.",
+              "skip": "Redis adapter."
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API",
+              "read": "Concepts and usage, Signaling, ICE Candidates.",
+              "skip": ""
+            }
+          ]
+        },
+        {
+          "weekId": "week_12",
+          "weekTitle": "WEEK 12: Background Jobs & Queues",
+          "focus": "Handling long-running tasks asynchronously.",
+          "concepts": [
+            "Message Brokers (Redis, BullMQ)",
+            "Worker Processes",
+            "Producer-Consumer Pattern"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Task Spawner",
+              "conceptLearned": "Redis & BullMQ.",
+              "whatToBuild": "Bun API pushing jobs to Redis queue. Worker processes it.",
+              "conceptsUsed": "Local Redis, Queue, Worker.",
+              "action": "Build the Task Spawner."
+            },
+            {
+              "title": "2. The Background Emailer",
+              "conceptLearned": "Queue Offloading.",
+              "whatToBuild": "Build API route accepting user registration. Push user data to BullMQ backed by Upstash Redis instead of blocking. Create worker script to consume queue and log success.",
+              "conceptsUsed": "BullMQ, Upstash.",
+              "action": "Build Background Emailer."
+            }
+          ],
+          "advancedProject": {
+            "title": "Asynchronous RAG Video Processing System",
+            "techStack": "Next.js, Bun, BullMQ, FastAPI.",
+            "features": "Upload large transcript. Bun queues it via BullMQ. FastAPI embeds chunks. Notify UI via WS when done.",
+            "conceptsUsed": "Heavy async architecture, decoupled backend."
+          },
+          "openSource": {
+            "whatToContribute": "Queue tooling.",
+            "whatToChange": "Improve BullMQ documentation. Look at Cal.com repo packages/trpc to see webhooks and queues.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "taskforcesh/bullmq, Cal.com."
+          },
+          "resources": [
+            {
+              "url": "https://redis.io/docs/latest/develop/get-started/",
+              "read": "Installation, What an in-memory data store is, message broker basics.",
+              "skip": "Redis Cluster."
+            },
+            {
+              "url": "https://docs.bullmq.io/",
+              "read": "Queues, Workers, Events, Getting Started, Concepts.",
+              "skip": "Sandboxed processors."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_7",
+      "stageTitle": "STAGE 7: Containerization & CI/CD",
+      "weeks": [
+        {
+          "weekId": "week_13",
+          "weekTitle": "WEEK 13: Docker & Compose",
+          "focus": "Isolating apps into containers.",
+          "concepts": [
+            "Containerization vs Virtualization",
+            "Dockerfiles",
+            "Docker Compose",
+            "Volumes and Networking"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Backend Container",
+              "conceptLearned": "Dockerfile.",
+              "whatToBuild": "Write Dockerfile for Bun API, build and run on mapped port.",
+              "conceptsUsed": "FROM, WORKDIR, CMD.",
+              "action": "Build the Container."
+            },
+            {
+              "title": "2. The 4-Service Symphony",
+              "conceptLearned": "Docker Compose.",
+              "whatToBuild": "Spin up Postgres, Redis, Bun, and FastAPI in one compose file.",
+              "conceptsUsed": "depends_on, volumes.",
+              "action": "Build the Symphony."
+            },
+            {
+              "title": "3. The Containerized Stack",
+              "conceptLearned": "Full-Stack Docker.",
+              "whatToBuild": "Write Dockerfiles for Turborepo Node.js and FastAPI. Write docker-compose.yml at root that spins up Node, Python, Postgres, and Redis simultaneously.",
+              "conceptsUsed": "docker compose up.",
+              "action": "Build Containerized Stack."
+            }
+          ],
+          "advancedProject": {
+            "title": "Containerized Custom AI Microservice",
+            "techStack": "Docker, Next.js, Bun, FastAPI.",
+            "features": "Unified docker-compose boots entire stack. FastAPI loads LoRA model. Bun queries it.",
+            "conceptsUsed": "Infrastructure as code, custom deployments."
+          },
+          "openSource": {
+            "whatToContribute": "Infrastructure.",
+            "whatToChange": "Add Dockerfile to repo missing one.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "docker-labeled repos."
+          },
+          "resources": [
+            {
+              "url": "https://docs.docker.com/get-started/",
+              "read": "Part 1 (Orientation), Part 2 (Containers), Part 7 (Multi-container apps).",
+              "skip": "Kubernetes."
+            },
+            {
+              "url": "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/",
+              "read": "Read carefully for writing Node and Python Dockerfiles.",
+              "skip": ""
+            }
+          ]
+        },
+        {
+          "weekId": "week_14",
+          "weekTitle": "WEEK 14: CI/CD Pipelines",
+          "focus": "Automating testing workflows.",
+          "concepts": [
+            "Continuous Integration (CI/CD)",
+            "GitHub Actions",
+            "Linting (eslint) & Testing (jest)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Strict CI Gatekeeper",
+              "conceptLearned": "GitHub Actions.",
+              "whatToBuild": "Create main.yml. On push, install deps, type-check, run unit tests.",
+              "conceptsUsed": "actions/checkout, setup-node.",
+              "action": "Build the Gatekeeper."
+            }
+          ],
+          "advancedProject": {
+            "title": "Automated AI Quality Pipeline",
+            "techStack": "GitHub Actions, Python, FastAPI.",
+            "features": "Trigger action on PR. Run PyTest suite that queries RAG endpoint. Evaluate responses.",
+            "conceptsUsed": "CI-driven ML testing."
+          },
+          "openSource": {
+            "whatToContribute": "CI/CD Maintenance.",
+            "whatToChange": "Update deprecated GitHub Actions.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "Repos with Dependabot alerts."
+          },
+          "resources": [
+            {
+              "url": "https://docs.github.com/en/actions/quickstart",
+              "read": "Writing your first workflow, Actions basics.",
+              "skip": "Self-hosted runners."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_8",
+      "stageTitle": "STAGE 8: Cloud Infrastructure",
+      "weeks": [
+        {
+          "weekId": "week_15",
+          "weekTitle": "WEEK 15: Cloud Deployment",
+          "focus": "Pushing containers to public internet.",
+          "concepts": [
+            "Serverless vs Provisioned (Vercel vs VPS)",
+            "Reverse Proxies (Nginx)",
+            "Managed Databases",
+            "SSL Certificates (Certbot)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Split Deployment",
+              "conceptLearned": "Cloud Hosting.",
+              "whatToBuild": "Deploy Next.js to Vercel, Bun to Railway. Setup CORS.",
+              "conceptsUsed": "Environment Variables.",
+              "action": "Build the Split Deployment."
+            },
+            {
+              "title": "2. Nginx Gatekeeper",
+              "conceptLearned": "Reverse Proxies.",
+              "whatToBuild": "Spin up Linux VPS. Install Docker/Nginx. Route port 80 to internal Docker ports.",
+              "conceptsUsed": "proxy_pass.",
+              "action": "Build the Gatekeeper."
+            },
+            {
+              "title": "3. The Edge Frontend",
+              "conceptLearned": "Domain Management.",
+              "whatToBuild": "Buy dev domain. Connect Turborepo to Vercel. Deploy Next.js. Configure Vercel ENV to point to production Postgres instead of local.",
+              "conceptsUsed": "Vercel Environments.",
+              "action": "Build Edge Frontend."
+            },
+            {
+              "title": "4. The Production Matrix (The Glue)",
+              "conceptLearned": "VPS Orchestration.",
+              "whatToBuild": "SSH into DigitalOcean. Install Git, Docker, Nginx. Clone Turborepo. Run docker-compose in detached mode. Configure Nginx and use Certbot for free SSL HTTPS.",
+              "conceptsUsed": "Certbot, Nginx config.",
+              "action": "Build Production Matrix."
+            }
+          ],
+          "advancedProject": {
+            "title": "Production-Grade RAG API",
+            "techStack": "VPS, Nginx, Docker, Node.js, FastAPI.",
+            "features": "Public Node API routes to internal FastAPI running Re-Ranking.",
+            "conceptsUsed": "Production deployment, multi-stage pipelines."
+          },
+          "openSource": {
+            "whatToContribute": "Deployment Documentation.",
+            "whatToChange": "Add 'Deploy to Railway' or Docker+Nginx guide.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "Trending repositories."
+          },
+          "resources": [
+            {
+              "url": "https://vercel.com/docs/deployments/overview",
+              "read": "Getting Started, Deployments, Environment Variables, Root Directory configs.",
+              "skip": "Edge Functions."
+            },
+            {
+              "url": "https://docs.digitalocean.com/products/droplets/getting-started/",
+              "read": "Provisioning Droplets, SSH, UFW Firewall (Ports 22, 80, 443).",
+              "skip": ""
+            },
+            {
+              "url": "https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/",
+              "read": "Proxying traffic, nginx.conf structure.",
+              "skip": ""
+            }
+          ]
+        },
+        {
+          "weekId": "week_16",
+          "weekTitle": "WEEK 16: Streaming Data",
+          "focus": "Optimizing UX with SSE.",
+          "concepts": [
+            "Server-Sent Events (SSE)",
+            "HTTP Streaming in Node/Bun",
+            "React Suspense"
+          ],
+          "microProjects": [
+            {
+              "title": "1. SSE Token Streamer",
+              "conceptLearned": "Server-Sent Events.",
+              "whatToBuild": "Bun endpoint streaming words via text/event-stream.",
+              "conceptsUsed": "res.write, EventSource.",
+              "action": "Build the Token Streamer."
+            }
+          ],
+          "advancedProject": {
+            "title": "Streaming Multi-Agent Research Dashboard",
+            "techStack": "Next.js, Bun, FastAPI, SSE.",
+            "features": "Next.js SSE to Bun. FastAPI runs multi-agent workflow, streams status back to UI.",
+            "conceptsUsed": "Complex stateful workflows, streaming."
+          },
+          "openSource": {
+            "whatToContribute": "UI/UX for Streaming.",
+            "whatToChange": "Implement stop generation button.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "AI Chat interfaces."
+          },
+          "resources": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events",
+              "read": "Receiving events.",
+              "skip": "Shared workers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_9",
+      "stageTitle": "STAGE 9: High-Performance Microservices",
+      "weeks": [
+        {
+          "weekId": "week_17",
+          "weekTitle": "WEEK 17: Binary Protocols (gRPC)",
+          "focus": "Replacing REST with Protocol Buffers.",
+          "concepts": [
+            "RPC vs REST",
+            "Protocol Buffers (.proto)",
+            "gRPC in Node.js",
+            "Redis Caching Strategies (Write-through, Cache-aside)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Polyglot Proto",
+              "conceptLearned": "Protocol Buffers.",
+              "whatToBuild": "Write service.proto. Generate TS and Python classes via protoc.",
+              "conceptsUsed": "protoc CLI.",
+              "action": "Build Proto definitions."
+            },
+            {
+              "title": "2. Redis Cache Middleware",
+              "conceptLearned": "Caching.",
+              "whatToBuild": "Add Redis middleware to slow Express route. Return instantly if cached.",
+              "conceptsUsed": "redis.get, redis.setex.",
+              "action": "Build Cache Middleware."
+            }
+          ],
+          "advancedProject": {
+            "title": "Ultra-Fast Multimodal Inspector",
+            "techStack": "Next.js, Bun, gRPC, FastAPI.",
+            "features": "Bun sends image/audio via gRPC to FastAPI. Processed via Whisper/VLM, returned via gRPC.",
+            "conceptsUsed": "Binary microservice communication."
+          },
+          "openSource": {
+            "whatToContribute": "Performance refactoring.",
+            "whatToChange": "Implement Protobufs for slow REST APIs.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "gRPC repos."
+          },
+          "resources": [
+            {
+              "url": "https://grpc.io/docs/what-is-grpc/introduction/",
+              "read": "Core Concepts.",
+              "skip": "ALTS."
+            }
+          ]
+        },
+        {
+          "weekId": "week_18",
+          "weekTitle": "WEEK 18: Database Scalability",
+          "focus": "Ensuring database survives high traffic.",
+          "concepts": [
+            "Database Indexing (B-Trees) and Query Plans (EXPLAIN ANALYZE)",
+            "Connection Pooling",
+            "Load Balancing with Nginx"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Million Row Indexer",
+              "conceptLearned": "DB Optimization.",
+              "whatToBuild": "Insert 1M rows. Use EXPLAIN ANALYZE. Add Index and compare times.",
+              "conceptsUsed": "CREATE INDEX.",
+              "action": "Build the Indexer."
+            },
+            {
+              "title": "2. Nginx Load Balancer",
+              "conceptLearned": "Horizontal Scaling.",
+              "whatToBuild": "Spin up 3 Bun instances. Route via Nginx Round-Robin.",
+              "conceptsUsed": "Nginx upstream block.",
+              "action": "Build Load Balancer."
+            }
+          ],
+          "advancedProject": {
+            "title": "GraphRAG Deep Research Engine",
+            "techStack": "Next.js, Bun, PostgreSQL, NetworkX.",
+            "features": "Extract Knowledge Graph. Query Neo4j + ChromaDB together.",
+            "conceptsUsed": "Combining multiple database paradigms."
+          },
+          "openSource": {
+            "whatToContribute": "Database Optimizations.",
+            "whatToChange": "Add missing DB indexes to Prisma schema.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "SaaS boilerplates."
+          },
+          "resources": [
+            {
+              "url": "https://useblocks.com/postgres-indexes",
+              "read": "Anatomy of an Index, B-Tree implementation.",
+              "skip": "Hash Indexes."
+            },
+            {
+              "url": "https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/",
+              "read": "Proxying Traffic, Choosing a Load-Balancing Method.",
+              "skip": "Session Persistence, Health Checks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_10",
+      "stageTitle": "STAGE 10: Observability & Security",
+      "weeks": [
+        {
+          "weekId": "week_19",
+          "weekTitle": "WEEK 19: System Observability",
+          "focus": "Visualizing health of microservices.",
+          "concepts": [
+            "Observability Pillars (Logs, Metrics, Traces)",
+            "Prometheus",
+            "Grafana",
+            "Sentry (Crash Tracking)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Metric Exporter",
+              "conceptLearned": "Prometheus Metrics.",
+              "whatToBuild": "Expose /metrics tracking HTTP requests and latency.",
+              "conceptsUsed": "Counter, Histogram.",
+              "action": "Build the Exporter."
+            },
+            {
+              "title": "2. The Command Center",
+              "conceptLearned": "Grafana Dashboards.",
+              "whatToBuild": "Docker-compose Prometheus/Grafana. Visualize RPS.",
+              "conceptsUsed": "PromQL.",
+              "action": "Build Command Center."
+            }
+          ],
+          "advancedProject": {
+            "title": "Monitored AI Gateway",
+            "techStack": "Node.js, Prometheus, Grafana.",
+            "features": "Node API gateway tracks latency. Visualized in Grafana.",
+            "conceptsUsed": "Distributed tracing concepts."
+          },
+          "openSource": {
+            "whatToContribute": "Instrumentation.",
+            "whatToChange": "Add OpenTelemetry tracing to a project.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "opentelemetry repos."
+          },
+          "resources": [
+            {
+              "url": "https://prometheus.io/docs/introduction/overview/",
+              "read": "Concepts, Overview, Getting Started.",
+              "skip": "Alertmanager."
+            },
+            {
+              "url": "https://docs.sentry.io/platforms/javascript/guides/nextjs/",
+              "read": "Sentry crash course for tracking exact line of code bugs.",
+              "skip": ""
+            }
+          ]
+        },
+        {
+          "weekId": "week_20",
+          "weekTitle": "WEEK 20: Security & Auth",
+          "focus": "Locking down full-stack API against malicious actors.",
+          "concepts": [
+            "OWASP Top 10 (Broken Access Control, Injection)",
+            "Auth.js (NextAuth) Session Management",
+            "API Rate Limiting"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Gated Gateway",
+              "conceptLearned": "OAuth and Rate Limiting.",
+              "whatToBuild": "Implement GitHub OAuth in Next.js via Auth.js. Add Upstash Rate Limiting to WebSocket endpoint (5 msgs/min). Return 429.",
+              "conceptsUsed": "Auth.js, Upstash Redis.",
+              "action": "Build Gated Gateway."
+            }
+          ],
+          "advancedProject": {
+            "title": "Real-Time Voice-to-Voice AI Agent",
+            "techStack": "Next.js, WebRTC, FastAPI.",
+            "features": "Voice streams via WebRTC, converted to text, responded via TTS, streamed back.",
+            "conceptsUsed": "Full-duplex communication."
+          },
+          "milestoneProject": {
+            "title": "Milestone Project 4: The Devin Clone (Skeleton Phase)",
+            "goal": "Begin building an autonomous software engineering agent.",
+            "requirements": "Split-screen React UI (Chat/Terminal). MCP Server attached to Python backend accessing an isolated Docker container. Agent must write script, execute via tool, read output."
+          },
+          "openSource": {
+            "whatToContribute": "Security/Auth review.",
+            "whatToChange": "Study NextAuth.js repo. Check how they enforce cookies and prevent XSS.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "NextAuth.js."
+          },
+          "resources": [
+            {
+              "url": "https://owasp.org/www-project-top-ten/",
+              "read": "Broken Access Control, Cryptographic Failures, Injection.",
+              "skip": ""
+            },
+            {
+              "url": "https://authjs.dev/getting-started/introduction",
+              "read": "Setup guide for Next.js App Router.",
+              "skip": ""
+            },
+            {
+              "url": "https://upstash.com/docs/redis/sdks/ratelimit-ts/getting-started",
+              "read": "Token Bucket algorithm via Redis.",
+              "skip": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_11",
+      "stageTitle": "STAGE 11: Cluster Orchestration",
+      "weeks": [
+        {
+          "weekId": "week_21",
+          "weekTitle": "WEEK 21: Kubernetes",
+          "focus": "Orchestrating containers via K8s.",
+          "concepts": ["Kubernetes Architecture", "K8s Manifests", "Minikube"],
+          "microProjects": [
+            {
+              "title": "1. The Local Cluster",
+              "conceptLearned": "K8s Deployments.",
+              "whatToBuild": "Install Minikube. Write deployment for 3 Bun replicas.",
+              "conceptsUsed": "kubectl apply, ReplicaSets.",
+              "action": "Build Local Cluster."
+            },
+            {
+              "title": "2. Internal Service Discovery",
+              "conceptLearned": "K8s Networking.",
+              "whatToBuild": "Bun communicates with FastAPI via internal K8s DNS.",
+              "conceptsUsed": "ClusterIP Services.",
+              "action": "Build Service Discovery."
+            }
+          ],
+          "advancedProject": {
+            "title": "K8s-Deployed Agentic Swarm",
+            "techStack": "Minikube, Next.js, Bun.",
+            "features": "LoadBalancer Service routes Bun replicas. Internal DNS to FastAPI.",
+            "conceptsUsed": "Container orchestration."
+          },
+          "openSource": {
+            "whatToContribute": "K8s Manifests.",
+            "whatToChange": "Add deployment/service yamls to projects.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "CMS platforms."
+          },
+          "resources": [
+            {
+              "url": "https://kubernetes.io/docs/concepts/",
+              "read": "API, Components.",
+              "skip": "Cloud Manager."
+            }
+          ]
+        },
+        {
+          "weekId": "week_22",
+          "weekTitle": "WEEK 22: Edge Computing",
+          "focus": "Serverless Edge vs Origin.",
+          "concepts": [
+            "Edge Computing",
+            "Cloudflare Workers/Vercel Edge",
+            "V8 Isolates"
+          ],
+          "microProjects": [
+            {
+              "title": "1. Edge Auth Middleware",
+              "conceptLearned": "Edge Computing.",
+              "whatToBuild": "Next.js Edge Middleware intercepts request and verifies JWT globally.",
+              "conceptsUsed": "NextResponse.next().",
+              "action": "Build Auth Middleware."
+            },
+            {
+              "title": "2. Global Latency Router",
+              "conceptLearned": "Geo-Routing.",
+              "whatToBuild": "Route EU users to eu-central API, US to us-east.",
+              "conceptsUsed": "Request headers.",
+              "action": "Build Router."
+            }
+          ],
+          "advancedProject": {
+            "title": "Edge-Protected Enterprise AI Gateway",
+            "techStack": "Vercel Edge, Bun, FastAPI.",
+            "features": "Edge checks JWT, Bun rate limits, FastAPI filters AI output.",
+            "conceptsUsed": "Edge interception."
+          },
+          "openSource": {
+            "whatToContribute": "Security testing.",
+            "whatToChange": "Add NeMo guardrails example.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "AI wrappers."
+          },
+          "resources": [
+            {
+              "url": "https://vercel.com/docs/functions/edge-middleware",
+              "read": "Middleware overview.",
+              "skip": "WASM."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_12",
+      "stageTitle": "STAGE 12: System Design & Capstone",
+      "weeks": [
+        {
+          "weekId": "week_23",
+          "weekTitle": "WEEK 23: System Design",
+          "focus": "Large scale architecture.",
+          "concepts": ["CAP Theorem", "Sharding", "Rate Limiting Algorithms"],
+          "microProjects": [
+            {
+              "title": "1. Token Bucket Rate Limiter",
+              "conceptLearned": "Rate Limiting.",
+              "whatToBuild": "Redis rate limit. 5 req/min. Return 429.",
+              "conceptsUsed": "INCR, EXPIRE.",
+              "action": "Build Limiter."
+            },
+            {
+              "title": "2. System Architecture Whiteboard",
+              "conceptLearned": "System Design.",
+              "whatToBuild": "Draw diagram for 1M concurrent users.",
+              "conceptsUsed": "Load Balancers, WS.",
+              "action": "Draw Architecture."
+            }
+          ],
+          "advancedProject": {
+            "title": "Production Load Tester",
+            "techStack": "Python, locust.",
+            "features": "Simulate 1,000 users. Watch it crash, fix bottlenecks.",
+            "conceptsUsed": "Chaos engineering."
+          },
+          "openSource": {
+            "whatToContribute": "Performance.",
+            "whatToChange": "Fix N+1 query problem.",
+            "contributionFlow": "Fork -> Branch -> PR.",
+            "whereToContribute": "GraphQL backends."
+          },
+          "resources": [
+            {
+              "url": "https://github.com/donnemartin/system-design-primer",
+              "read": "CAP, Proxies.",
+              "skip": "Obscure algorithms."
+            }
+          ]
+        },
+        {
+          "weekId": "week_24",
+          "weekTitle": "WEEK 24: Capstone Project",
+          "focus": "Resume-defining Capstone.",
+          "concepts": [
+            "End-to-End Architecture",
+            "Writing a world-class README",
+            "Remote Job Networking"
+          ],
+          "microProjects": [],
+          "advancedProject": {
+            "title": "The Final Capstone",
+            "techStack": "Next.js, Bun, FastAPI, Postgres.",
+            "features": "Choose one: AI Codeforces Clone, Autonomous Research SaaS, Real-Time Audio Translator.",
+            "conceptsUsed": "Full stack synthesis."
+          },
+          "milestoneProject": {
+            "title": "Milestone Project 4: Deploy the Devin Clone",
+            "goal": "Autonomous AI engineer fully live on internet and observable.",
+            "requirements": "Vercel frontend. DigitalOcean backend API and Python. Python spins up node:alpine isolated Docker containers. Sentry integrated for full stack trace. Custom RunPod endpoint for AI reasoning."
+          },
+          "openSource": {
+            "whatToContribute": "Capstone Release.",
+            "whatToChange": "Open source your Capstone project. Find 3 early-stage foreign startups on YC Work at a Startup, reproduce a bug using Docker, submit PR.",
+            "contributionFlow": "Write Docs -> Add Diagrams -> Share.",
+            "whereToContribute": "GitHub Profile, YC Startup Repos."
+          },
+          "resources": [
+            {
+              "url": "https://makeareadme.com/",
+              "read": "The entire guide.",
+              "skip": ""
+            },
+            {
+              "url": "https://www.techinterviewhandbook.org/software-engineering-resume-guide/",
+              "read": "Resume formatting, Action bullet points.",
+              "skip": "Irrelevant internship sections."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_13",
+      "stageTitle": "STAGE 13: Remote Job Acquisition Protocol",
+      "weeks": [
+        {
+          "weekId": "week_25_post",
+          "weekTitle": "Post-Bootcamp Daily Schedule",
+          "focus": "Shifting from 100% learning to a 50/50 split of continued building and aggressive, targeted networking.",
+          "concepts": [
+            "Hours 1-3: Code (Maintain Capstone, Open Source)",
+            "Hours 4-5: Interview Prep (System Design, LeetCode)",
+            "Hours 6-8: Outreach (Cold emails, networking)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Proof of Work Portfolio",
+              "conceptLearned": "Portfolio Architecture.",
+              "whatToBuild": "A single-page Next.js portfolio showcasing exactly THREE projects: Capstone, Multi-Agent System, and High-Performance Microservices app.",
+              "conceptsUsed": "Next.js, copy-writing.",
+              "action": "Write 3-bullet summary for each: tech stack, hardest technical problem solved."
+            },
+            {
+              "title": "2. The Asynchronous Cold Email Engine",
+              "conceptLearned": "Bypassing HR.",
+              "whatToBuild": "Spreadsheet tracking 50 foreign startups. Find CTO/VP of Engineering emails.",
+              "conceptsUsed": "Networking.",
+              "action": "Send 4-sentence email: Who you are, Capstone link, specific bug/feature in their product, low-friction CTA."
+            },
+            {
+              "title": "3. System Design Verbalization",
+              "conceptLearned": "Technical Screen Prep.",
+              "whatToBuild": "Record a 5-minute Loom video walking through Excalidraw architecture of Capstone.",
+              "conceptsUsed": "Communication, Excalidraw.",
+              "action": "Explain architectural choices (Bun vs Node, ChromaDB). Send link in cold emails."
+            }
+          ],
+          "advancedProject": {
+            "title": "The Paid Trial / Contract-to-Hire",
+            "techStack": "Strategy",
+            "features": "Remove hiring risk for foreign companies.",
+            "conceptsUsed": "Pitch a 4-week paid trial contract to take a scoped ticket from their backlog."
+          },
+          "openSource": {
+            "whatToContribute": "Core features to a startup's public repo.",
+            "whatToChange": "Find an early-stage AI startup. Solve 2-3 complex issues, write tests, submit PRs.",
+            "contributionFlow": "Once merged, directly DM the founder on Twitter/LinkedIn to ask for a role.",
+            "whereToContribute": "Y Combinator backed companies."
+          },
+          "resources": [
+            {
+              "url": "https://www.ycombinator.com/jobs",
+              "read": "Filter by 'Remote' and 'Engineering'. Look for Seed/Series A.",
+              "skip": ""
+            },
+            {
+              "url": "https://wellfound.com/",
+              "read": "Create profile focusing entirely on startup roles.",
+              "skip": ""
+            },
+            {
+              "url": "https://blog.pragmaticengineer.com/software-engineering-resumes/",
+              "read": "Templates for passing engineering manager screens.",
+              "skip": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_14",
+      "stageTitle": "STAGE 14: Surviving Production & Continuous Mastery",
+      "weeks": [
+        {
+          "weekId": "week_26_post",
+          "weekTitle": "Months 1-6 on the Job",
+          "focus": "Mastering engineering communication, MLOps, and reading academic AI literature to stay ahead of the curve.",
+          "concepts": [
+            "Request For Comments (RFC) / Design Documents",
+            "Incident Management and Blameless Post-Mortems",
+            "Trunk-Based Development vs. GitFlow"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Architecture RFC",
+              "conceptLearned": "Engineering Design Docs.",
+              "whatToBuild": "Write a 3-page Markdown document for a new Capstone feature detailing Architecture, DB Schema, API Contracts, Alternative Approaches.",
+              "conceptsUsed": "Technical writing.",
+              "action": "Send it to another developer/LLM for critique before coding."
+            },
+            {
+              "title": "2. The Blameless Post-Mortem",
+              "conceptLearned": "Incident Management.",
+              "whatToBuild": "Deliberately crash Capstone DB. Write RCA document using '5 Whys' technique.",
+              "conceptsUsed": "Root Cause Analysis (RCA).",
+              "action": "Write the RCA blamelessly."
+            }
+          ],
+          "advancedProject": {
+            "title": "The Internal Workflow Automator",
+            "techStack": "Company stack + FastAPI + Agentic AI.",
+            "features": "Find the most annoying task your new team does. Build an internal tool connecting company systems to LLM via FastAPI.",
+            "conceptsUsed": "Internal tooling, cross-functional automation."
+          },
+          "openSource": {
+            "whatToContribute": "Code Reviews and Issue Triage.",
+            "whatToChange": "Stop just submitting PRs. Review other people's PRs, test code, find edge cases, leave feedback.",
+            "contributionFlow": "Find open PR -> Pull branch locally -> Run tests -> Leave detailed review.",
+            "whereToContribute": "Repos where you have successful merges."
+          },
+          "resources": [
+            {
+              "url": "https://www.industrialempathy.com/posts/design-docs-at-google/",
+              "read": "The entire article. Exactly how Google engineers write design docs.",
+              "skip": ""
+            },
+            {
+              "url": "https://sre.google/sre-book/postmortem-culture/",
+              "read": "Blameless Post-Mortems, Best Practices.",
+              "skip": "Specific Google-internal tool references."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_15",
+      "stageTitle": "STAGE 15: Systems Programming & Hardware Optimization",
+      "weeks": [
+        {
+          "weekId": "week_27_post",
+          "weekTitle": "WEEK 25: Go, WebAssembly & Extreme Concurrency",
+          "focus": "Moving beyond single-threaded limitations by learning Go and Rust for WASM to achieve maximum throughput.",
+          "concepts": [
+            "Go Fundamentals (Goroutines, Channels, Pointers)",
+            "Compiling Rust to WebAssembly (WASM)",
+            "Multi-threading vs. Asynchronous I/O"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The High-Throughput Go Router",
+              "conceptLearned": "Goroutines & Channels.",
+              "whatToBuild": "Go web server endpoint accepting 1,000 IDs. Spawn 1,000 Goroutines simulating DB reads. Collect via Channel.",
+              "conceptsUsed": "go func(), chan int, sync.WaitGroup.",
+              "action": "Build Go Router and compare memory footprint."
+            },
+            {
+              "title": "2. Rust-to-WASM Image Filter",
+              "conceptLearned": "WebAssembly.",
+              "whatToBuild": "Rust function processing raw image byte array with grayscale conversion. Compile to WASM. Load in Next.js.",
+              "conceptsUsed": "wasm-pack, Next.js WASM.",
+              "action": "Build WASM Filter."
+            }
+          ],
+          "advancedProject": {
+            "title": "The Hybrid Inference Gateway",
+            "techStack": "Go, Next.js, WebAssembly (Rust), Python (FastAPI).",
+            "features": "Next.js uses Rust WASM to compress payload. Go API Gateway uses Goroutines to route request to 5 FastAPI workers, waits for fastest response.",
+            "conceptsUsed": "Polyglot microservices, fan-out/fan-in concurrency."
+          },
+          "openSource": {
+            "whatToContribute": "Performance rewriting.",
+            "whatToChange": "Find Python/Node CLI tool. Rewrite core bottleneck in Go/Rust and submit PR.",
+            "contributionFlow": "Fork -> Branch -> Benchmark Before/After -> PR.",
+            "whereToContribute": "Data processing CLIs."
+          },
+          "resources": [
+            {
+              "url": "https://go.dev/tour/welcome/1",
+              "read": "Basics, Methods and interfaces, Concurrency.",
+              "skip": "Generics."
+            },
+            {
+              "url": "https://rustwasm.github.io/docs/book/",
+              "read": "Introduction, Hello World, Setup.",
+              "skip": "Publishing to npm."
+            }
+          ]
+        },
+        {
+          "weekId": "week_28_post",
+          "weekTitle": "WEEK 26: Distributed Training & Custom Kernels",
+          "focus": "Dropping below PyTorch to write custom GPU instructions, training models across multiple machines.",
+          "concepts": [
+            "gRPC Streaming in Go",
+            "Distributed Tracing (Jaeger / OpenTelemetry across languages)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Go gRPC Streamer",
+              "conceptLearned": "Bidirectional gRPC Streaming.",
+              "whatToBuild": "Upgrade gRPC proto with 'stream' keyword. Python client streams 100 audio chunks/sec to Go server, Go streams text back.",
+              "conceptsUsed": "rpc Chat(stream Note) returns (stream Note).",
+              "action": "Build the Streamer."
+            }
+          ],
+          "advancedProject": {
+            "title": "Distributed PEFT Trainer",
+            "techStack": "PyTorch, Triton, Hugging Face Accelerate.",
+            "features": "Multi-process training loop fine-tuning LLM via LoRA. Replaces PyTorch activation with custom Triton kernel.",
+            "conceptsUsed": "Hardware-aware programming, distributed orchestration."
+          },
+          "openSource": {
+            "whatToContribute": "Hardware optimizations.",
+            "whatToChange": "Implement Triton kernel fallback in AI repository, or fix device placement bug.",
+            "contributionFlow": "Fork -> Branch -> Debug multi-GPU logic -> PR.",
+            "whereToContribute": "huggingface/accelerate or PyTorch extensions."
+          },
+          "resources": [
+            {
+              "url": "https://pytorch.org/tutorials/beginner/ddp_series_intro.html",
+              "read": "What is DDP, Single Node Multi-GPU setup.",
+              "skip": "AWS/Cloud specific multinode setups."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_16",
+      "stageTitle": "STAGE 16: The Graduation Endgame",
+      "weeks": [
+        {
+          "weekId": "week_29_post",
+          "weekTitle": "The Final 3 Semesters Protocol",
+          "focus": "Leveraging academic research for industry credibility, ruthlessly optimizing hardware limits, positioning as Senior talent.",
+          "concepts": [
+            "The Research Leverage (Bridging academic research and production software)",
+            "Professional Signaling (Updating LinkedIn/GitHub emphasizing TS, Node, Architecture)"
+          ],
+          "microProjects": [
+            {
+              "title": "1. The Production SAR Pipeline",
+              "conceptLearned": "Productionization.",
+              "whatToBuild": "Wrap PyTorch oil spill detection model in production-grade microservice. FastAPI inference, TS/Node backend.",
+              "conceptsUsed": "Colab endpoints.",
+              "action": "Push heavy compute to cloud pipelines."
+            },
+            {
+              "title": "2. The Rock-Solid Environment",
+              "conceptLearned": "Developer Productivity.",
+              "whatToBuild": "Frozen, unbreakable Debian 13 XFCE setup. Stick to X11.",
+              "conceptsUsed": "Linux Rofi.",
+              "action": "Stop experimenting with unstable compositors."
+            },
+            {
+              "title": "3. The Deep Tech Cold Pitch",
+              "conceptLearned": "Direct Outreach.",
+              "whatToBuild": "Find 20 foreign startups in Earth Observation/Computer Vision. Cold email CTOs.",
+              "conceptsUsed": "Networking.",
+              "action": "Pitch your domain specific depth."
+            }
+          ],
+          "advancedProject": {
+            "title": "The Marathon Mindset",
+            "techStack": "Physical Conditioning",
+            "features": "Maintain 10km distance running. Sync training blocks: 4 hrs code, run, 4 hrs code.",
+            "conceptsUsed": "Dopamine baseline reset."
+          },
+          "openSource": {
+            "whatToContribute": "",
+            "whatToChange": "",
+            "contributionFlow": "",
+            "whereToContribute": ""
+          },
+          "resources": []
+        }
+      ]
+    }
+  ]
+}

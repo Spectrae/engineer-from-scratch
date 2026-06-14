@@ -1,0 +1,575 @@
+{
+  "trackId": "track_b",
+  "trackName": "AI / ML Engineering",
+  "stages": [
+    {
+      "stageId": "stage_2",
+      "stageTitle": "STAGE 2: AI Ignition & Tensors",
+      "weeks": [
+        {
+          "weekId": "week_3",
+          "weekTitle": "WEEK 3: Python and FastAPI",
+          "focus": "Building your first AI backends and integrating Python into the stack.",
+          "concepts": [
+            "Python 3 Crash Course (Syntax, Dictionaries, Virtual Environments)",
+            "FastAPI Basics (Routing, Pydantic Schemas)"
+          ],
+          "microProjects": [
+            {"title": "1. Dummy AI Server", "conceptLearned": "Python & FastAPI.", "whatToBuild": "A FastAPI backend that accepts a string and returns a simulated \"AI sentiment score\" (random math).", "conceptsUsed": "pip install fastapi uvicorn, @app.post, Pydantic BaseModel.", "action": "After learning FastAPI -> Build the Dummy AI Server. View Swagger docs."}
+          ],
+          "advancedProject": {"title": "Cross-Language Integration System", "techStack": "Node.js, Express, Python, FastAPI.", "features": "Frontend HTML form -> Node.js backend -> Internal API call to FastAPI -> Returns sentiment score -> Node.js back to frontend.", "conceptsUsed": "Microservices communication, CORS, Server-to-Server requests."},
+          "openSource": {"whatToContribute": "Feature additions.", "whatToChange": "Add missing endpoint variation in beginner Python repository.", "contributionFlow": "Fork -> Branch -> Code -> PR.", "whereToContribute": "GitHub issues labeled good first issue AND python."},
+          "resources": [
+            {"url": "https://fastapi.tiangolo.com/tutorial/first-steps/", "read": "First Steps, Path Parameters, Query Parameters, Request Body. See how Python handles requests.", "skip": "Security, Deployment, Database integration."}
+          ]
+        },
+        {
+          "weekId": "week_4",
+          "weekTitle": "WEEK 4: AI Math and Tensors",
+          "focus": "Understanding the raw mathematical structures of AI.",
+          "concepts": [
+            "Linear Algebra & Calculus Basics for AI (Matrix multiplication, Derivatives)",
+            "PyTorch Basics (Tensors, Operations) - Run strictly on Google Colab."
+          ],
+          "microProjects": [
+            {"title": "1. Tensor Manipulator", "conceptLearned": "PyTorch Tensors.", "whatToBuild": "A Google Colab notebook demonstrating tensor creation, reshaping, matrix multiplication, and converting to/from NumPy.", "conceptsUsed": "torch.tensor, torch.matmul, tensor.view().", "action": "After learning PyTorch basics -> Build the Tensor Manipulator notebook."},
+            {"title": "2. Tensor Foundations", "conceptLearned": "Basic Gradients.", "whatToBuild": "Write PyTorch script creating two random tensors, multiplying them, and calculating a simple gradient. Push to GitHub.", "conceptsUsed": "Colab 'Save to GitHub' feature.", "action": "Build Tensor Foundations."}
+          ],
+          "advancedProject": {"title": "AI Feedback Logger System", "techStack": "Node.js, Express, MongoDB, FastAPI, Python.", "features": "Node server queries FastAPI for classification, Node saves both text and classification to MongoDB.", "conceptsUsed": "API composition, Database persistence."},
+          "openSource": {"whatToContribute": "Test cases.", "whatToChange": "Add unit tests to untested utility functions in open-source projects.", "contributionFlow": "Fork -> Branch -> Write tests -> Commit -> PR.", "whereToContribute": "Repos using PyTest."},
+          "resources": [
+            {"url": "https://pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html", "read": "Entire Tensors tutorial.", "skip": "Model building tutorials."},
+            {"url": "https://pytorch.org/tutorials/beginner/basics/intro.html", "read": "Tensors, Datasets & DataLoaders, Build the Neural Network.", "skip": ""},
+            {"url": "https://www.youtube.com/watch?v=VMj-3S1tku0 (Andrej Karpathy)", "read": "Watch Neural Networks: Zero to Hero Part 1. Code along in Colab.", "skip": "Do not just watch it like a movie."}
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_3",
+      "stageTitle": "STAGE 3: Neural Architectures",
+      "weeks": [
+        {
+          "weekId": "week_5",
+          "weekTitle": "WEEK 5: Neural Networks Core",
+          "focus": "Building your first training loop in PyTorch.",
+          "concepts": [
+            "Neural Network Core (torch.nn.Module)",
+            "Forward and Backward Passes (Backpropagation)",
+            "Loss Functions (MSE, CrossEntropy) & Optimizers (SGD, Adam)"
+          ],
+          "microProjects": [
+            {"title": "1. The First Brain", "conceptLearned": "PyTorch Training Loop.", "whatToBuild": "Colab notebook building a simple Feed-Forward Neural Network to classify a synthetic dataset.", "conceptsUsed": "nn.Sequential, nn.Linear, optim.Adam, loss.backward(), optimizer.step().", "action": "Build and train the model. Plot the loss curve."}
+          ],
+          "advancedProject": {"title": "Type-Safe AI Router", "techStack": "Node.js (TypeScript), Express, Prisma, PostgreSQL, FastAPI.", "features": "TS backend receives payload, validates using TS interfaces, saves to PostgreSQL, forwards to FastAPI.", "conceptsUsed": "Strict End-to-End typing, DB Transactions."},
+          "openSource": {"whatToContribute": "Type Definitions.", "whatToChange": "Add missing TS interfaces to a JS repository.", "contributionFlow": "Fork -> Branch -> Write Types -> PR.", "whereToContribute": "DefinitelyTyped."},
+          "resources": [
+            {"url": "https://pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html", "read": "Build the Neural Network, Autograd, Optimization Loop.", "skip": "Saving/Loading models."}
+          ]
+        },
+        {
+          "weekId": "week_6",
+          "weekTitle": "WEEK 6: CNNs, RNNs & Model Saving",
+          "focus": "Giving your AI the ability to see and read.",
+          "concepts": [
+            "Convolutional Neural Networks (CNNs) for Image Processing",
+            "Recurrent Neural Networks (RNNs) basics for Sequential Data",
+            "Saving and Loading PyTorch weights (.pth files)"
+          ],
+          "microProjects": [
+            {"title": "1. MNIST Vision Core", "conceptLearned": "CNNs & Model Saving.", "whatToBuild": "Train a CNN to recognize handwritten digits (MNIST dataset). Save the model weights.", "conceptsUsed": "nn.Conv2d, nn.MaxPool2d, torch.save().", "action": "Build the Vision Core. Download the .pth weights file."},
+            {"title": "2. Vision Checkpoint", "conceptLearned": "State Dictionaries.", "whatToBuild": "Train CIFAR-10 CNN. Save model's state_dict to a .pth file.", "conceptsUsed": "state_dict.", "action": "Save and download model."}
+          ],
+          "advancedProject": {"title": "Authenticated AI Image Service", "techStack": "Turborepo, Node.js (TS), Prisma, JWT, FastAPI, PyTorch.", "features": "User logs in, sends image. Node validates JWT, sends to FastAPI. FastAPI processes image and returns digit.", "conceptsUsed": "Auth Middleware, File Handling, Model Inference."},
+          "openSource": {"whatToContribute": "Security/Auth improvements.", "whatToChange": "Implement missing JWT validation check.", "contributionFlow": "Fork -> Branch -> Code -> PR.", "whereToContribute": "Backend boilerplates."},
+          "resources": [
+            {"url": "https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html", "read": "Training a Classifier (Focus on CNN architecture).", "skip": "Multi-GPU training."},
+            {"url": "https://www.youtube.com/watch?v=TCH_1BHY58I (Andrej Karpathy)", "read": "Watch makemore Part 2 (MLP) & Part 3. Code along in Colab.", "skip": ""},
+            {"url": "https://pytorch.org/tutorials/beginner/saving_loading_models.html", "read": "Read saving and loading mechanics.", "skip": ""}
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_4",
+      "stageTitle": "STAGE 4: The Transformer Era",
+      "weeks": [
+        {
+          "weekId": "week_7",
+          "weekTitle": "WEEK 7: Attention Mechanisms",
+          "focus": "Understanding the core mathematical breakthrough behind modern LLMs.",
+          "concepts": [
+            "The bottleneck of RNNs (Vanishing gradients)",
+            "The Self-Attention Mechanism (Queries, Keys, Values)",
+            "Scaled Dot-Product Attention"
+          ],
+          "microProjects": [
+            {"title": "1. Attention Matrix From Scratch", "conceptLearned": "Queries, Keys, Values.", "whatToBuild": "Colab notebook implementing a basic Scaled Dot-Product Attention function using pure PyTorch tensor operations.", "conceptsUsed": "torch.matmul, softmax, Transposing.", "action": "Build the Attention Matrix. Prove softmax output rows sum to 1."}
+          ],
+          "advancedProject": {"title": "React-Node-AI Pipeline", "techStack": "React (Vite), Node.js (TS), Express, FastAPI.", "features": "React frontend sends text to Node API. Node logs request, forwards to FastAPI. FastAPI returns attention score, React renders bar chart.", "conceptsUsed": "Full-stack wiring, CORS, React controlled components."},
+          "openSource": {"whatToContribute": "UI adjustments.", "whatToChange": "Fix accessibility issues in a React component library.", "contributionFlow": "Fork -> Branch -> Code -> PR.", "whereToContribute": "chakra-ui, mui."},
+          "resources": [
+            {"url": "https://pytorch.org/tutorials/beginner/transformer_tutorial.html", "read": "Mathematical formulas for attention. (Focus on understanding Q, K, V).", "skip": "Full Transformer implementation."},
+            {"url": "https://www.youtube.com/watch?v=eMIx5fFNoYc (3Blue1Brown)", "read": "Attention in neural networks. Best visual explanation of QKV.", "skip": ""}
+          ]
+        },
+        {
+          "weekId": "week_8",
+          "weekTitle": "WEEK 8: Hugging Face Transformers",
+          "focus": "Leveraging pre-trained state-of-the-art AI models.",
+          "concepts": [
+            "The Transformer Architecture (Encoder vs. Decoder)",
+            "The Hugging Face Ecosystem",
+            "Tokenization & Inference"
+          ],
+          "microProjects": [
+            {"title": "1. HF Inference Sandbox", "conceptLearned": "Hugging Face.", "whatToBuild": "Colab notebook downloading BERT model and Tokenizer to perform zero-shot sentiment classification.", "conceptsUsed": "transformers, AutoTokenizer.", "action": "Build the Sandbox. Do not train the model; just run inference."},
+            {"title": "2. The Hugging Face Pipeline", "conceptLearned": "Model Import.", "whatToBuild": "Load distilbert-base-uncased-finetuned-sst-2-english model, run sentiment analysis on 5 hardcoded sentences.", "conceptsUsed": "Pipeline API.", "action": "Print the outputs."}
+          ],
+          "advancedProject": {"title": "Production-Grade Sentiment Analyzer", "techStack": "React, React Router, Node.js (TS), FastAPI, HuggingFace.", "features": "React UI fetches text. Node validates, FastAPI uses HuggingFace to get sentiment, saves to PostgreSQL, returns to React.", "conceptsUsed": "Pre-trained AI integration, complex state management."},
+          "openSource": {"whatToContribute": "Bug fixes in hooks.", "whatToChange": "Solve infinite re-render due to missing dependency array.", "contributionFlow": "Fork -> Branch -> Debug -> PR.", "whereToContribute": "React router repos."},
+          "resources": [
+            {"url": "https://huggingface.co/docs/transformers/quicktour", "read": "Pipeline API, AutoClass tutorial.", "skip": "Fine-tuning models."},
+            {"url": "https://huggingface.co/learn/nlp-course/chapter1/1", "read": "Chapter 1 (Transformer Models) and Chapter 2. Do all code exercises in Colab.", "skip": ""}
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_5",
+      "stageTitle": "STAGE 5: RAG Systems & Embeddings",
+      "weeks": [
+        {
+          "weekId": "week_9",
+          "weekTitle": "WEEK 9: Text Embeddings",
+          "focus": "Converting human language into math (Embeddings).",
+          "concepts": [
+            "Text Embeddings (Dense Vector Representations)",
+            "Hugging Face Sentence Transformers",
+            "Vector Mathematics (Cosine Similarity)"
+          ],
+          "microProjects": [
+            {"title": "1. The Vectorizer", "conceptLearned": "Text Embeddings.", "whatToBuild": "FastAPI endpoint accepting string, returning 384-dimensional vector.", "conceptsUsed": "SentenceTransformer, model.encode().", "action": "Calculate mathematical distance between two sentences."}
+          ],
+          "advancedProject": {"title": "Semantic Search Engine V1", "techStack": "Next.js, Bun, FastAPI, Python.", "features": "Next.js queries Bun. Bun forwards to FastAPI to calculate embeddings and return top matches.", "conceptsUsed": "Server-Side Rendering, Vector math."},
+          "openSource": {"whatToContribute": "Documentation.", "whatToChange": "Fix outdated React Router patterns in Next.js boilerplates.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "Next.js templates."},
+          "resources": [
+            {"url": "https://sbert.net/", "read": "Computing Sentence Embeddings, Quickstart, Usage.", "skip": "Training models."},
+            {"url": "https://huggingface.co/blog/getting-started-with-embeddings", "read": "Understand how a chunk of text becomes a dense vector representing semantic meaning.", "skip": ""}
+          ]
+        },
+        {
+          "weekId": "week_10",
+          "weekTitle": "WEEK 10: Vector Databases & The RAG Pipeline",
+          "focus": "Storing millions of text embeddings efficiently.",
+          "concepts": [
+            "Vector Databases (ChromaDB or Pinecone)",
+            "Document Chunking Strategies",
+            "Retrieval-Augmented Generation (RAG) Architecture"
+          ],
+          "microProjects": [
+            {"title": "1. Vector Store Populator", "conceptLearned": "Vector Databases.", "whatToBuild": "Python script splitting text, embedding via SBERT, storing in ChromaDB.", "conceptsUsed": "chromadb, collection.add(), text splitting.", "action": "Build the Populator. Verify storage by querying collection."},
+            {"title": "2. RAG Retrieval API", "conceptLearned": "Context Retrieval.", "whatToBuild": "FastAPI fetching top 3 chunks for a query from ChromaDB.", "conceptsUsed": "collection.query().", "action": "Build the API. Test against stored documents."},
+            {"title": "3. The Vector Chunker", "conceptLearned": "Pinecone integration.", "whatToBuild": "Download Wikipedia article. Split into 500-char overlapping segments. Embed using all-MiniLM-L6-v2, push to free Pinecone index.", "conceptsUsed": "Pinecone upsert.", "action": "Build Vector Chunker."}
+          ],
+          "advancedProject": {"title": "Full-Stack Document Q&A App", "techStack": "Next.js, Bun, Prisma, FastAPI, ChromaDB, Pinecone.", "features": "User uploads doc. Bun saves metadata, FastAPI chunks and stores in ChromaDB/Pinecone. User queries text from vector store.", "conceptsUsed": "End-to-end RAG architecture."},
+          "openSource": {"whatToContribute": "Tutorials.", "whatToChange": "Add 'How to use with Bun' example to docs. Look at LangChain.js vectorstores directory for Pinecone wrappers.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "Chroma repos, LangChain.js."},
+          "resources": [
+            {"url": "https://docs.trychroma.com/getting-started", "read": "Core API (Client, Collections, Add, Query).", "skip": "Multi-modal embeddings."},
+            {"url": "https://docs.pinecone.io/guides/getting-started/quickstart", "read": "Create free account. Read how to create an Index and upsert vectors.", "skip": ""},
+            {"url": "https://python.langchain.com/docs/concepts/#retrieval", "read": "Document Loaders, Text Splitters, Retrievers.", "skip": ""}
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_6",
+      "stageTitle": "STAGE 6: Autonomous Agents",
+      "weeks": [
+        {
+          "weekId": "week_11",
+          "weekTitle": "WEEK 11: LLM Agents & ReAct",
+          "focus": "Teaching your AI to use tools to solve problems autonomously.",
+          "concepts": [
+            "The ReAct Framework (Reason + Act)",
+            "Tool Calling / Function Calling",
+            "System Prompts for Orchestration"
+          ],
+          "microProjects": [
+            {"title": "1. Calculator Agent", "conceptLearned": "Tool Calling.", "whatToBuild": "Python script forcing LLM to output TOOL_CALL. Script executes Python eval.", "conceptsUsed": "ReAct prompting, execution loops.", "action": "Build the Calculator Agent from scratch. Do not use LangChain yet."},
+            {"title": "2. The Weather Agent", "conceptLearned": "Function Calling.", "whatToBuild": "Python script. Give LLM system prompt explaining get_weather tool. Ask 'weather in Tokyo'. Parse response, run dummy function, return '22°C, Sunny', get final NLP answer.", "conceptsUsed": "Agent loop.", "action": "Build Weather Agent."}
+          ],
+          "advancedProject": {"title": "Real-Time Agentic Chatbot", "techStack": "Next.js, Bun, Socket.io, FastAPI.", "features": "WebSocket stream between Next.js and Bun. FastAPI generates response and streams tokens back.", "conceptsUsed": "WebSocket streaming, Agentic execution."},
+          "openSource": {"whatToContribute": "WebSocket edge cases.", "whatToChange": "Add connection retry logic to chat app.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "Socket.io boilerplates."},
+          "resources": [
+            {"url": "https://arxiv.org/abs/2210.03629", "read": "Abstract and introduction of ReAct paper. Understand paradigm.", "skip": "Math proofs."},
+            {"url": "https://www.anthropic.com/research/building-effective-agents", "read": "Read entirely. Difference between routing, chains, and true autonomous agents.", "skip": ""},
+            {"url": "https://platform.openai.com/docs/guides/function-calling", "read": "Understand how LLM outputs structured JSON to execute a specific function.", "skip": ""}
+          ]
+        },
+        {
+          "weekId": "week_12",
+          "weekTitle": "WEEK 12: Stateful AI Memory",
+          "focus": "Giving your AI the ability to remember past conversations.",
+          "concepts": [
+            "Conversational Memory (Buffer, Windowed, Summary)",
+            "Chat History injection into Prompts",
+            "Token limits and context windows"
+          ],
+          "microProjects": [
+            {"title": "1. Stateful Chat API", "conceptLearned": "AI Memory.", "whatToBuild": "FastAPI endpoint fetching past messages from DB, appending new, sending to LLM.", "conceptsUsed": "PostgreSQL JSONB, Prompt formatting.", "action": "Build the Stateful Chat. Test: Tell AI your name, ask it later."},
+            {"title": "2. Sliding Window Summarizer", "conceptLearned": "Token limits.", "whatToBuild": "Python function using small LLM to summarize oldest 5 messages when history hits 10.", "conceptsUsed": "Programmatic text summarization.", "action": "Build Summarizer."}
+          ],
+          "advancedProject": {"title": "Asynchronous RAG Video Processing System", "techStack": "Next.js, Bun, BullMQ, FastAPI.", "features": "Upload large transcript. Bun queues it via BullMQ. FastAPI embeds chunks. Notify UI via WS when done.", "conceptsUsed": "Heavy async architecture, decoupled backend."},
+          "openSource": {"whatToContribute": "Queue tooling.", "whatToChange": "Improve BullMQ documentation. Add example persisting LangChain/LlamaIndex memory to SQL.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "taskforcesh/bullmq, AI framework ecosystems."},
+          "resources": []
+        }
+      ]
+    },
+    {
+      "stageId": "stage_7",
+      "stageTitle": "STAGE 7: Model Fine-Tuning & Evaluation",
+      "weeks": [
+        {
+          "weekId": "week_13",
+          "weekTitle": "WEEK 13: Parameter-Efficient Fine-Tuning (PEFT)",
+          "focus": "Teaching a pre-trained LLM a specific new skill.",
+          "concepts": [
+            "Cost of Fine-Tuning vs PEFT",
+            "LoRA (Low-Rank Adaptation) & QLoRA",
+            "Hugging Face SFTTrainer"
+          ],
+          "microProjects": [
+            {"title": "1. The Text-to-SQL Adapter", "conceptLearned": "LoRA Fine-Tuning.", "whatToBuild": "Colab using Unsloth. Train LoRA adapter on NLP-to-SQL data for 100 steps.", "conceptsUsed": "SFTTrainer, 4-bit Quantization, LoraConfig.", "action": "Push weights to Hugging Face."}
+          ],
+          "advancedProject": {"title": "Containerized Custom AI Microservice", "techStack": "Docker, Next.js, Bun, FastAPI.", "features": "Unified docker-compose boots entire stack. FastAPI loads LoRA model. Bun queries it.", "conceptsUsed": "Infrastructure as code, custom deployments."},
+          "openSource": {"whatToContribute": "Infrastructure.", "whatToChange": "Add Dockerfile to repo missing one.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "docker-labeled repos."},
+          "resources": [
+            {"url": "https://huggingface.co/docs/peft/index", "read": "Conceptual Guides (LoRA), Quicktour.", "skip": "DeepSpeed."}
+          ]
+        },
+        {
+          "weekId": "week_14",
+          "weekTitle": "WEEK 14: LLM Evaluation",
+          "focus": "Proving that your AI is generating good responses.",
+          "concepts": [
+            "The Hallucination Problem",
+            "LLM Evaluation Metrics (Faithfulness, Answer Relevance)",
+            "Constrained Generation (Forcing LLM to output valid JSON)"
+          ],
+          "microProjects": [
+            {"title": "1. Strict JSON Forcer", "conceptLearned": "Constrained Generation.", "whatToBuild": "FastAPI endpoint extracting data into Pydantic schema using library like outlines.", "conceptsUsed": "Pydantic BaseModel, validation loops.", "action": "Build the Forcer. Send edge-case inputs."},
+            {"title": "2. RAG Evaluator Script", "conceptLearned": "LLM Evaluation.", "whatToBuild": "Python script using Ragas to score 'Faithfulness' based on LLM as a Judge paradigm.", "conceptsUsed": "Evaluation frameworks.", "action": "Intentionally feed hallucinated answer and verify score drops."}
+          ],
+          "advancedProject": {"title": "Automated AI Quality Pipeline", "techStack": "GitHub Actions, Python, FastAPI, PyTest.", "features": "Trigger action on PR. Run PyTest suite that queries RAG endpoint. Evaluate responses with Ragas.", "conceptsUsed": "CI-driven ML testing."},
+          "openSource": {"whatToContribute": "CI/CD Maintenance.", "whatToChange": "Update deprecated GitHub Actions.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "Repos with Dependabot alerts."},
+          "resources": [
+            {"url": "https://docs.ragas.io/en/stable/", "read": "Introduction, Core Metrics.", "skip": "Custom prompt adaptations."}
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_8",
+      "stageTitle": "STAGE 8: Multi-Agent Orchestration",
+      "weeks": [
+        {
+          "weekId": "week_15",
+          "weekTitle": "WEEK 15: Advanced RAG",
+          "focus": "Upgrading RAG pipeline from semantic search to enterprise-grade.",
+          "concepts": [
+            "Failure of standard RAG (Lost in the middle, poor top-k retrieval)",
+            "Re-Ranking (Cross-Encoders)",
+            "HyDE (Hypothetical Document Embeddings)"
+          ],
+          "microProjects": [
+            {"title": "1. The Re-Ranker Script", "conceptLearned": "Cross-Encoders.", "whatToBuild": "Fetch top 20 results via Bi-Encoder, re-score via HuggingFace Cross-Encoder. Print top 3.", "conceptsUsed": "multi-stage retrieval.", "action": "Build the script. Compare precision improvement."}
+          ],
+          "advancedProject": {"title": "Production-Grade RAG API", "techStack": "VPS, Nginx, Docker, Node.js, FastAPI.", "features": "Public Node API routes to internal FastAPI running Re-Ranking.", "conceptsUsed": "Production deployment, multi-stage pipelines."},
+          "openSource": {"whatToContribute": "Deployment Documentation.", "whatToChange": "Add 'Deploy to Railway' guide.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "Trending repositories."},
+          "resources": [
+            {"url": "https://www.sbert.net/examples/applications/retrieve_rerank/README.html", "read": "Retrieve & Re-Rank concept, Bi-Encoder vs Cross-Encoder.", "skip": "Training Cross-Encoder."}
+          ]
+        },
+        {
+          "weekId": "week_16",
+          "weekTitle": "WEEK 16: Multi-Agent Systems",
+          "focus": "Orchestrating AI agents to collaborate.",
+          "concepts": [
+            "Multi-Agent Architectures (Router, Worker, Evaluator)",
+            "State Graphs for AI Orchestration (LangGraph)",
+            "Handoffs and shared state between LLMs"
+          ],
+          "microProjects": [
+            {"title": "1. Two-Agent Debate", "conceptLearned": "Multi-Agent Handoff.", "whatToBuild": "Python script pitting 2 LLMs against each other for 4 turns.", "conceptsUsed": "Prompt engineering, execution loops.", "action": "Build the Debate."},
+            {"title": "2. The Supervisor Router", "conceptLearned": "Agent Routing.", "whatToBuild": "Supervisor LLM outputs specific category string, Python routes execution to worker functions.", "conceptsUsed": "Zero-shot classification.", "action": "Build Supervisor. Verify routing accuracy."}
+          ],
+          "advancedProject": {"title": "Streaming Multi-Agent Research Dashboard", "techStack": "Next.js, Bun, FastAPI, LangGraph, SSE.", "features": "Next.js SSE to Bun. FastAPI runs multi-agent workflow (Researcher->Writer->Reviewer), streams status updates.", "conceptsUsed": "Complex stateful workflows, streaming."},
+          "openSource": {"whatToContribute": "UI/UX for Streaming.", "whatToChange": "Implement stop generation button.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "AI Chat interfaces."},
+          "resources": [
+            {"url": "https://langchain-ai.github.io/langgraph/", "read": "Concepts (State, Nodes, Edges), Multi-Agent architectures.", "skip": "Advanced Auth."}
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_9",
+      "stageTitle": "STAGE 9: Multimodal AI & Knowledge Graphs",
+      "weeks": [
+        {
+          "weekId": "week_17",
+          "weekTitle": "WEEK 17: Audio & Vision AI",
+          "focus": "Working with Vision and Audio AI models.",
+          "concepts": [
+            "Automatic Speech Recognition (ASR) with OpenAI Whisper",
+            "Vision-Language Models (VLMs) and Image Encoders",
+            "Multimodal Prompting"
+          ],
+          "microProjects": [
+            {"title": "1. The Transcriber API", "conceptLearned": "Audio AI.", "whatToBuild": "FastAPI endpoint transcribing .wav file using Whisper.", "conceptsUsed": "whisper.load_model.", "action": "Build the Transcriber. Record 10s voice note and test."},
+            {"title": "2. The Anomaly Detector", "conceptLearned": "Vision-Language Models.", "whatToBuild": "Load llava-1.5-7b-hf. Feed satellite photo, prompt it to detect geographical features.", "conceptsUsed": "Multimodal inputs.", "action": "Print text output."}
+          ],
+          "advancedProject": {"title": "Ultra-Fast Multimodal Inspector", "techStack": "Next.js, Bun, gRPC, FastAPI.", "features": "Bun sends image/audio via gRPC to FastAPI. Processed via Whisper/VLM, returned via gRPC.", "conceptsUsed": "Binary microservice communication."},
+          "openSource": {"whatToContribute": "Performance refactoring.", "whatToChange": "Implement Protobufs for slow REST APIs.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "gRPC repos."},
+          "resources": [
+            {"url": "https://github.com/openai/whisper", "read": "Setup, Python Usage.", "skip": "Command-line, Fine-tuning."},
+            {"url": "https://platform.openai.com/docs/guides/vision", "read": "Understand how base64 encoded images are appended to standard JSON prompt payload.", "skip": ""},
+            {"url": "https://huggingface.co/learn/audio-course/chapter5/introduction", "read": "Complete chapter in Colab. Extract waveform, generate transcript.", "skip": ""}
+          ]
+        },
+        {
+          "weekId": "week_18",
+          "weekTitle": "WEEK 18: Knowledge Graphs",
+          "focus": "Understanding relationships in data.",
+          "concepts": [
+            "Knowledge Graphs (Nodes and Edges)",
+            "Graph Databases (Neo4j basics or NetworkX)",
+            "GraphRAG (Retrieving structured entity relationships + unstructured text)"
+          ],
+          "microProjects": [
+            {"title": "1. Entity Extractor Graph", "conceptLearned": "Knowledge Graphs.", "whatToBuild": "Use LLM to extract nodes/edges. Plot via NetworkX.", "conceptsUsed": "networkx.Graph().", "action": "Build Entity Extractor."}
+          ],
+          "advancedProject": {"title": "GraphRAG Deep Research Engine", "techStack": "Next.js, Bun, PostgreSQL, NetworkX, ChromaDB.", "features": "FastAPI processes docs twice: Vector DB for chunks, LLM for Knowledge Graph. Synthesize both for final answer.", "conceptsUsed": "Combining multiple database paradigms."},
+          "openSource": {"whatToContribute": "Database Optimizations.", "whatToChange": "Add missing DB indexes to Prisma schema.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "SaaS boilerplates."},
+          "resources": [
+            {"url": "https://neo4j.com/docs/getting-started/", "read": "Graph Database Concepts (Nodes, Relationships, Labels).", "skip": "Cypher."}
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_10",
+      "stageTitle": "STAGE 10: High-Throughput Inference & Alignment",
+      "weeks": [
+        {
+          "weekId": "week_19",
+          "weekTitle": "WEEK 19: vLLM & Quantization",
+          "focus": "Serving LLMs 10x faster.",
+          "concepts": [
+            "The KV Cache Bottleneck in LLM generation",
+            "PagedAttention and vLLM",
+            "Model Quantization (GGUF, AWQ, GPTQ) for speed and memory efficiency"
+          ],
+          "microProjects": [
+            {"title": "1. The vLLM Inference Engine", "conceptLearned": "High-Throughput Inference.", "whatToBuild": "Colab using vLLM to serve AWQ quantized model. Batch concurrent requests.", "conceptsUsed": "vllm.entrypoints.openai.api_server.", "action": "Build the Engine. Send 10 concurrent requests and observe batching."}
+          ],
+          "advancedProject": {"title": "Monitored AI Gateway", "techStack": "Node.js, Prometheus, Grafana, vLLM.", "features": "Node API gateway tracks latency. Visualized in Grafana.", "conceptsUsed": "Distributed tracing concepts."},
+          "openSource": {"whatToContribute": "Instrumentation.", "whatToChange": "Add OpenTelemetry tracing to a project.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "opentelemetry repos."},
+          "resources": [
+            {"url": "https://docs.vllm.ai/en/latest/", "read": "Getting Started, OpenAI Compatible Server, Quantization.", "skip": "Distributed Inference."}
+          ]
+        },
+        {
+          "weekId": "week_20",
+          "weekTitle": "WEEK 20: Alignment (DPO)",
+          "focus": "Teaching your AI how to behave using Direct Preference Optimization.",
+          "concepts": [
+            "The Alignment Problem (Why fine-tuning isn't enough)",
+            "RLHF vs DPO (Direct Preference Optimization)",
+            "HuggingFace trl (Transformer Reinforcement Learning)"
+          ],
+          "microProjects": [
+            {"title": "1. The DPO Aligner", "conceptLearned": "Direct Preference Optimization.", "whatToBuild": "Colab notebook. Train model to prefer chosen style over rejected style using DPOTrainer.", "conceptsUsed": "DPOTrainer, Log probabilities.", "action": "Build the Aligner. Compare outputs before/after."}
+          ],
+          "advancedProject": {"title": "Real-Time Voice-to-Voice AI Agent", "techStack": "Next.js, WebRTC, FastAPI.", "features": "Voice streams via WebRTC, converted to text, responded via TTS, streamed back.", "conceptsUsed": "Full-duplex communication."},
+          "openSource": {"whatToContribute": "Dataset Curation.", "whatToChange": "Contribute to RLHF preference datasets.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "Hugging Face Hub."},
+          "resources": [
+            {"url": "https://huggingface.co/docs/trl/main/en/dpo", "read": "DPO documentation, Expected dataset format, DPOTrainer usage.", "skip": "PPO."}
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_11",
+      "stageTitle": "STAGE 11: Swarm Intelligence & Guardrails",
+      "weeks": [
+        {
+          "weekId": "week_21",
+          "weekTitle": "WEEK 21: Cyclic Agent Workflows",
+          "focus": "Building agents that iterate and fail.",
+          "concepts": [
+            "Cyclic Agent Workflows (State Machines vs Linear Chains)",
+            "LangGraph / Microsoft AutoGen",
+            "Error recovery and self-reflection loops in LLMs"
+          ],
+          "microProjects": [
+            {"title": "1. The Self-Correcting Coder", "conceptLearned": "LangGraph.", "whatToBuild": "LangGraph script: Coder node writes code, Executor node runs it via exec(), passes errors back to Coder to fix.", "conceptsUsed": "StateGraphs, Conditional Edges.", "action": "Build the Coder. Watch it fail and fix its own code."}
+          ],
+          "advancedProject": {"title": "K8s-Deployed Agentic Swarm", "techStack": "Minikube, Next.js, Bun.", "features": "LoadBalancer Service routes Bun replicas. Internal DNS to FastAPI triggers LangGraph swarm (Researcher->Writer->FactChecker).", "conceptsUsed": "Container orchestration."},
+          "openSource": {"whatToContribute": "K8s Manifests.", "whatToChange": "Add deployment/service yamls to projects.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "CMS platforms."},
+          "resources": [
+            {"url": "https://langchain-ai.github.io/langgraph/tutorials/introduction/", "read": "Part 1 & 2 (Basic Graphs, Adding State/Memory).", "skip": "Human-in-the-loop."}
+          ]
+        },
+        {
+          "weekId": "week_22",
+          "weekTitle": "WEEK 22: AI Guardrails",
+          "focus": "Preventing AI from generating malicious content.",
+          "concepts": [
+            "Prompt Injection and Jailbreaks",
+            "AI Guardrails (Semantic routing, toxicity filtering)",
+            "Llama-Guard / NeMo Guardrails"
+          ],
+          "microProjects": [
+            {"title": "1. The Unbreakable Proxy", "conceptLearned": "AI Guardrails.", "whatToBuild": "FastAPI endpoint blocking prompt injections using Guardrail model (like Llama-Guard-2).", "conceptsUsed": "Input validation classification.", "action": "Build Proxy. Try to trick API into giving virus instructions."},
+            {"title": "2. The Ephemeral Executor (The Glue)", "conceptLearned": "Docker SDK for Python.", "whatToBuild": "Script using docker pip package. Spins up python:3.9-slim container without network, runs Python string, captures error, destroys container.", "conceptsUsed": "Docker daemon SDK.", "action": "Build Executor."},
+            {"title": "3. The Self-Correcting Agent (The Glue)", "conceptLearned": "Secure Sandbox Loop.", "whatToBuild": "Connect Ephemeral Executor to LangGraph agent as a tool. Give agent logic error prompt. Watch it execute in Docker, read logs, rewrite code.", "conceptsUsed": "Tool Calling Agents.", "action": "Build Self-Correcting Agent."}
+          ],
+          "advancedProject": {"title": "Edge-Protected Enterprise AI Gateway", "techStack": "Vercel Edge, Bun, FastAPI.", "features": "Edge checks JWT, Bun rate limits, FastAPI filters AI output.", "conceptsUsed": "Edge interception."},
+          "openSource": {"whatToContribute": "Security testing.", "whatToChange": "Add NeMo guardrails example.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "AI wrappers."},
+          "resources": [
+            {"url": "https://github.com/NVIDIA/NeMo-Guardrails", "read": "Getting Started, Core Concepts (Colang, Actions).", "skip": "Advanced custom model integration."},
+            {"url": "https://docker-py.readthedocs.io/en/stable/", "read": "Containers section. Write script commanding Docker Daemon.", "skip": ""},
+            {"url": "https://python.langchain.com/docs/concepts/#tool-calling", "read": "Review how LLM decides to use tool, reads output, and decides next action.", "skip": ""}
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_12",
+      "stageTitle": "STAGE 12: Production Optimization & Inference",
+      "weeks": [
+        {
+          "weekId": "week_23",
+          "weekTitle": "WEEK 23: Cost Management",
+          "focus": "Saving money on repeated LLM queries.",
+          "concepts": [
+            "Semantic Caching (Saving money on repeated LLM queries)",
+            "Cost Management and Token Optimization",
+            "Shadow Deployment & A/B Testing for AI Models"
+          ],
+          "microProjects": [
+            {"title": "1. The Semantic Cache", "conceptLearned": "Cost Optimization.", "whatToBuild": "FastAPI endpoint uses ChromaDB as cache. Embed prompt. If similar prompt exists (similarity > 0.95), return cached answer instantly.", "conceptsUsed": "Vector similarity search.", "action": "Build Semantic Cache. Test timing drops."}
+          ],
+          "advancedProject": {"title": "Production Load Tester", "techStack": "Python, locust.", "features": "Simulate 1,000 users. Watch it crash, fix bottlenecks.", "conceptsUsed": "Chaos engineering."},
+          "openSource": {"whatToContribute": "Performance.", "whatToChange": "Fix N+1 query problem.", "contributionFlow": "Fork -> Branch -> PR.", "whereToContribute": "GraphQL backends."},
+          "resources": [
+            {"url": "https://redis.io/glossary/rate-limiting/", "read": "Token Bucket.", "skip": ""}
+          ]
+        },
+        {
+          "weekId": "week_24",
+          "weekTitle": "WEEK 24: Capstone Deployment",
+          "focus": "Resume-defining Capstone.",
+          "concepts": [
+            "End-to-End Architecture",
+            "Writing a world-class README",
+            "Remote Job Networking"
+          ],
+          "microProjects": [
+            {"title": "1. The Serverless GPU", "conceptLearned": "RunPod Serverless.", "whatToBuild": "Package custom Unsloth LoRA model into Docker image using vLLM server format. Push to Docker Hub, deploy to RunPod.", "conceptsUsed": "vLLM, Docker Hub.", "action": "Build Serverless GPU."}
+          ],
+          "advancedProject": {"title": "The Final Capstone", "techStack": "Next.js, Bun, FastAPI, Postgres.", "features": "Choose one: AI Codeforces Clone, Autonomous Research SaaS, Real-Time Audio Translator.", "conceptsUsed": "Full stack synthesis."},
+          "openSource": {"whatToContribute": "Capstone Release.", "whatToChange": "Open source your Capstone project.", "contributionFlow": "Write Docs -> Add Diagrams -> Share.", "whereToContribute": "GitHub Profile."},
+          "resources": [
+            {"url": "https://docs.runpod.io/serverless/overview", "read": "Deploy Docker container containing fine-tuned model to cloud GPU.", "skip": ""},
+            {"url": "https://docs.vllm.ai/en/latest/", "read": "High-throughput memory-management library using PagedAttention.", "skip": ""}
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_13",
+      "stageTitle": "STAGE 13: Remote Job Acquisition Protocol",
+      "weeks": [
+        {
+          "weekId": "week_25_post",
+          "weekTitle": "Post-Bootcamp Daily Schedule",
+          "focus": "Shifting to targeted networking.",
+          "concepts": [
+            "The Paid Trial / Contract-to-Hire Pitch"
+          ],
+          "microProjects": [],
+          "advancedProject": {"title": "The Paid Trial / Contract-to-Hire", "techStack": "Strategy", "features": "Foreign companies hesitate. Pitch a '4-week paid trial contract'.", "conceptsUsed": "Networking."},
+          "openSource": {"whatToContribute": "Core features to a startup's public repo.", "whatToChange": "Solve complex issues.", "contributionFlow": "DM founder.", "whereToContribute": "Y Combinator companies."},
+          "resources": []
+        }
+      ]
+    },
+    {
+      "stageId": "stage_14",
+      "stageTitle": "STAGE 14: Continuous Mastery",
+      "weeks": [
+        {
+          "weekId": "week_26_post",
+          "weekTitle": "Months 1-6 on the Job",
+          "focus": "Reading academic AI literature to stay ahead of the curve.",
+          "concepts": [
+            "MLOps (Model deployment at enterprise scale using Ray or Kubeflow)",
+            "Reading and extracting architectures from ArXiv papers",
+            "Evaluating Data Drift and Model Decay in production"
+          ],
+          "microProjects": [
+            {"title": "1. The ArXiv Implementation", "conceptLearned": "Academic ML Literature.", "whatToBuild": "Find recently published, highly cited AI paper on ArXiv. Attempt to implement core math/architecture in pure PyTorch in Colab.", "conceptsUsed": "Translating math into tensor operations.", "action": "Build the Implementation."}
+          ],
+          "advancedProject": {"title": "The Internal Workflow Automator", "techStack": "Company stack + FastAPI + Agentic AI.", "features": "Build internal tool to automate repetitive tasks.", "conceptsUsed": "Internal tooling."},
+          "openSource": {"whatToContribute": "Code Reviews and Issue Triage.", "whatToChange": "Review PRs.", "contributionFlow": "Leave feedback.", "whereToContribute": "Successful merge repos."},
+          "resources": [
+            {"url": "https://arxiv.org/list/cs.CL/recent", "read": "Abstracts of top 5 papers in NLP.", "skip": "Dense proofs until finding relevant paper."}
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "stage_15",
+      "stageTitle": "STAGE 15: Hardware Optimization",
+      "weeks": [
+        {
+          "weekId": "week_27_post",
+          "weekTitle": "WEEK 25: AI Inference Bottlenecks",
+          "focus": "Hardware limits.",
+          "concepts": [
+            "CPU vs. GPU Architecture (ALUs, VRAM, Memory Bandwidth)",
+            "Bottlenecks in AI Inference (Compute-bound vs. Memory-bound)"
+          ],
+          "microProjects": [
+            {"title": "1. GPU Memory Profiler", "conceptLearned": "Memory-Bound Operations.", "whatToBuild": "Colab script loading large HF model. Use torch.profiler to trace forward pass. View in TensorBoard to see HBM to ALU transfer times.", "conceptsUsed": "torch.profiler.profile, TensorBoard.", "action": "Build Profiler."}
+          ],
+          "advancedProject": {"title": "The Hybrid Inference Gateway", "techStack": "Go, Next.js, WASM, FastAPI.", "features": "Go gateway concurrent routing to 5 FastAPI workers.", "conceptsUsed": "Fan-out concurrency."},
+          "openSource": {"whatToContribute": "Performance rewriting.", "whatToChange": "Rewrite bottleneck in Go.", "contributionFlow": "PR.", "whereToContribute": "Data processing CLIs."},
+          "resources": []
+        },
+        {
+          "weekId": "week_28_post",
+          "weekTitle": "WEEK 26: Custom AI Kernels & Distributed Training",
+          "focus": "Dropping below PyTorch to write custom GPU instructions.",
+          "concepts": [
+            "OpenAI Triton (Writing custom GPU kernels in Python)",
+            "Distributed Data Parallel (DDP) vs. Fully Sharded Data Parallel (FSDP)",
+            "Model Parallelism vs. Tensor Parallelism"
+          ],
+          "microProjects": [
+            {"title": "1. Custom Triton Softmax", "conceptLearned": "GPU Kernels.", "whatToBuild": "Write custom Softmax using OpenAI triton language in Colab. Benchmark against PyTorch C++ native function.", "conceptsUsed": "triton.jit, shared memory.", "action": "Build Kernel within 10% of native speed."},
+            {"title": "2. Simulated DDP Cluster", "conceptLearned": "Distributed Training.", "whatToBuild": "PyTorch training script using torch.distributed. Simulate multi-GPU using multiple CPU processes sharing batches via gloo backend.", "conceptsUsed": "dist.init_process_group, DistributedDataParallel.", "action": "Build Simulated Cluster."}
+          ],
+          "advancedProject": {"title": "Distributed PEFT Trainer with Custom Kernels", "techStack": "PyTorch, Triton, Hugging Face Accelerate.", "features": "Multi-process training loop. Replace PyTorch activation with custom Triton kernel.", "conceptsUsed": "Low-level model surgery."},
+          "openSource": {"whatToContribute": "Hardware optimizations.", "whatToChange": "Implement Triton kernel fallback.", "contributionFlow": "Fork -> PR.", "whereToContribute": "huggingface/accelerate."},
+          "resources": [
+            {"url": "https://triton-lang.org/main/getting-started/tutorials/index.html", "read": "Tutorial 1 (Vector Addition), Tutorial 2 (Fused Softmax).", "skip": "Flash Attention."},
+            {"url": "https://pytorch.org/tutorials/beginner/ddp_series_intro.html", "read": "What is DDP.", "skip": "AWS multinode setups."}
+          ]
+        }
+      ]
+    }
+  ]
+}

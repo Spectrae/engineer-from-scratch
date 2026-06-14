@@ -1,0 +1,196 @@
+/* Track Header */
+.track-header {
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-lg);
+}
+
+.track-header h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.track-stats {
+    display: flex;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.track-stat-item span {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    display: block;
+    margin-top: var(--spacing-xs);
+}
+
+/* Stage List */
+.stage-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.stage-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-lg);
+    transition: border-color var(--transition-fast);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.stage-card:hover {
+    border-color: var(--text-secondary);
+}
+
+.stage-info h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.stage-info p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-family: var(--font-mono);
+}
+
+.stage-meta {
+    text-align: right;
+    font-family: var(--font-mono);
+}
+
+.stage-meta .completion {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-xs);
+    display: block;
+}
+
+.stage-meta .weeks {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+/* ... (Keep existing Track Header and Stage List styles from Stage 4) ... */
+
+/* Expandable System (Details / Summary) */
+.expandable {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-md);
+    transition: border-color var(--transition-fast);
+}
+
+.expandable:hover {
+    border-color: var(--text-secondary);
+}
+
+.expandable-header {
+    padding: var(--spacing-md) var(--spacing-lg);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; /* Hide default arrow */
+    user-select: none;
+}
+
+/* Hide webkit default marker */
+.expandable-header::-webkit-details-marker {
+    display: none;
+}
+
+.expandable[open] > .expandable-header {
+    border-bottom: 1px solid var(--border-color);
+    border-color: var(--border-color);
+}
+
+.expandable-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.expandable-title h3 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.expandable-indicator {
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: normal;
+    transition: transform var(--transition-fast);
+}
+
+.expandable[open] > .expandable-header .expandable-indicator {
+    content: "-";
+    transform: rotate(45deg);
+    color: var(--accent-color);
+}
+
+/* Nested Content Area */
+.expandable-content {
+    padding: var(--spacing-lg);
+    background-color: var(--bg-color);
+}
+
+/* Nested Week Styling */
+.week-container {
+    border-left: 2px solid var(--border-color);
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.week-header {
+    margin-bottom: var(--spacing-md);
+}
+
+.week-focus {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Section Blocks inside Week */
+.content-block {
+    margin-bottom: var(--spacing-lg);
+}
+
+.content-block h4 {
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.resource-item {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-sm);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.resource-link {
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    text-decoration: underline;
+    word-break: break-all;
+}
