@@ -78,6 +78,43 @@
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--text-secondary);
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.footer-left a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--text-secondary);
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.footer-left a:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+.footer-icon {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-secondary);
+    border-bottom: none !important;
+    transition: color var(--transition-fast);
+}
+
+.footer-icon:hover {
+    color: var(--text-primary);
+}
+
+.footer-separator {
+    opacity: 0.4;
 }
 
 .app-footer .status {
