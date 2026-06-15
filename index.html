@@ -3,53 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Learning Tracker</title>
     
-    <!-- Base CSS -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <!-- Inside <head> below dashboard.css -->
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/roadmap.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     
-    <!-- Component CSS -->
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <title>Full Stack AI Engineering</title>
+    
+    <link rel="stylesheet" href="css/variables.css?v=3.0">
+    <link rel="stylesheet" href="css/reset.css?v=3.0">
+    <link rel="stylesheet" href="css/layout.css?v=3.0">
+    <link rel="stylesheet" href="css/components.css?v=3.0">
+    <link rel="stylesheet" href="css/dashboard.css?v=3.0">
+    <link rel="stylesheet" href="css/roadmap.css?v=3.0">
+    <link rel="stylesheet" href="css/responsive.css?v=3.0">
 </head>
 <body>
     <div class="app-container">
-                <header class="top-nav">
-                    <div class="nav-brand">
-                        <h1>> AI / FROM SCRATCH</h1>
-                    </div>
-                    
-                    <div class="search-container">
-                        <input type="text" id="global-search" class="search-input" placeholder="Search syllabus, projects, resources...">
-                    </div>
-        
-                    <nav class="nav-links">
-                        <a href="#/" class="nav-link active" data-route="/">Dashboard</a>
-                        <a href="#/tracks" class="nav-link" data-route="/tracks">Tracks</a>
-                        <a href="#/settings" class="nav-link" data-route="/settings">Settings</a>
-                    </nav>
-                </header>
+        <header class="top-nav">
+            <div class="nav-brand">
+                <a href="#/">
+                    <h1>> FULL STACK AI ENGINEERING</h1>
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="https://github.com/Spectrae/fullstack-ai-engineering" target="_blank" class="nav-icon" title="GitHub Repository">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="#/settings" class="nav-link nav-icon" data-route="/settings" title="Settings">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                </a>
+            </nav>
+        </header>
 
         <main id="app-root" class="main-content">
-            <!-- Dynamic view injected here by router -->
             <section class="base-loading">
                 <p>Initializing systems...</p>
             </section>
         </main>
 
         <footer class="app-footer">
-            <p>Personal Learning Management System</p>
+            <p>Personal Learning Platform</p>
             <p class="status">Progress Saved in Browser Only</p>
         </footer>
     </div>
 
-    <!-- Core App Logic -->
-    <script src="js/app.js" type="module"></script>
+    <script src="js/app.js?v=3.0" type="module"></script>
 </body>
 </html>

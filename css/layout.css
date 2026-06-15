@@ -16,27 +16,38 @@
     z-index: 100;
 }
 
+.nav-brand a {
+    text-decoration: none;
+}
+
 .nav-brand h1 {
     font-size: 1.2rem;
     color: var(--accent-color);
+    transition: opacity var(--transition-fast);
+}
+
+.nav-brand a:hover h1 {
+    opacity: 0.8;
 }
 
 .nav-links {
     display: flex;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
+    align-items: center;
 }
 
-.nav-links a {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
+.nav-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xs);
     color: var(--text-secondary);
     transition: color var(--transition-fast);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    border-radius: var(--border-radius);
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-icon:hover,
+.nav-icon.active {
     color: var(--text-primary);
 }
 

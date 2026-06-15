@@ -1,13 +1,9 @@
 import { Storage } from './storage.js';
 
-/**
- * Progress Engine
- * Calculates completion percentages and updates DOM progress bars and stats.
- */
-
 export const Progress = {
     init() {
         this.bindCheckboxes();
+        this.updateUI(); // Force update on load to fill the bar
     },
 
     bindCheckboxes() {
@@ -17,11 +13,10 @@ export const Progress = {
             const taskId = cb.dataset.taskId;
             if (!taskId) return;
 
-            // 1. Set initial state from LocalStorage on render
+            // Set initial state from LocalStorage on render
             cb.checked = Storage.getTaskStatus(taskId);
 
-            // 2. Listen for user toggles
-            // Remove old listener to prevent memory leaks if re-rendered
+            // Listen for user toggles
             const newCb = cb.cloneNode(true);
             cb.parentNode.replaceChild(newCb, cb);
 
@@ -33,32 +28,27 @@ export const Progress = {
     },
 
     updateUI() {
-        // This function will eventually calculate precise percentages based on JSON data (Stage 8).
-        // For now, we update the global dashboard statistics.
         const totalCompleted = Storage.getTotalCompletedTasks();
         
-        // Update Stats Grid if present
-        const statsElements = document.querySelectorAll('.stat-value');
-        if (statsElements.length >= 3) {
-            // Placeholder updates until we have total counts from JSON
-            statsElements[2].innerText = totalCompleted; // Completed Tasks
+        // Update Tasks Executed
+        const statTasks = document.getElementById('stat-tasks');
+        if (statTasks) {
+            statTasks.innerText = totalCompleted;
         }
 
-        // Update Activity Feed if present
-        const activityList = document.querySelector('.activity-list');
-        if (activityList) {
-            const activities = Storage.getRecentActivity();
-            if (activities.length > 0) {
-                activityList.innerHTML = activities.map(act => {
-                    const date = new Date(act.time);
-                    const timeString = `${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`;
-                    return `
-                        <div class="activity-item">
-                            <span class="action">${act.desc}</span>
-                            <span class="time">${timeString}</span>
-                        </div>
-                    `;
-                }).join('');
+        // Update Overall Progress 
+        const statOverall = document.getElementById('stat-overall');
+        const statBar = document.getElementById('stat-progress-bar');
+        
+        if (statOverall) {
+            const estimatedTotalTasks = 150; // Approximated total checkboxes across all 24 weeks
+            let percentage = Math.min(Math.round((totalCompleted / estimatedTotalTasks) * 100), 100);
+            
+            statOverall.innerText = `${percentage}%`;
+            
+            // Fill the visual bar smoothly
+            if (statBar) {
+                statBar.style.width = `${percentage}%`;
             }
         }
     }

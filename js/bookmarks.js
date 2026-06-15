@@ -12,8 +12,11 @@ export const Bookmarks = {
             const title = btn.dataset.title;
             const url = btn.dataset.url;
 
+            // Check if bookmark exists in the Storage data
+            const isBookmarked = Storage.data.bookmarks && Storage.data.bookmarks[id];
+
             // Set initial state
-            if (Storage.isBookmarked(id)) {
+            if (isBookmarked) {
                 btn.classList.add('active');
                 btn.innerHTML = '★'; // Filled star
             } else {
@@ -27,12 +30,15 @@ export const Bookmarks = {
 
             newBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                Storage.toggleBookmark(id, title, url);
-                this.init(); // Re-bind and update UI
+                e.stopPropagation(); // VERY IMPORTANT: Stops the <details> accordion from opening/closing when clicking the star
                 
-                // If on dashboard, force re-render to update the list
+                Storage.toggleBookmark(id, title, url);
+                
+                // If we are on the dashboard, re-render it instantly to update the list visually
                 if (window.location.hash === '#/' || window.location.hash === '') {
                     window.dispatchEvent(new Event('hashchange'));
+                } else {
+                    this.init(); // Just re-bind the current button on other pages
                 }
             });
         });

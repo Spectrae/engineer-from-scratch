@@ -14,9 +14,6 @@ export const Router = {
         if (hash === '/') {
             UI.renderLandingPage();
         }
-        else if (hash === '/tracks') {
-            UI.renderTracksPage();
-        }
         else if (hash.startsWith('/track/')) {
             const trackId = hash.split('/')[2];
             await UI.renderTrackPage(trackId);

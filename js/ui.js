@@ -28,62 +28,106 @@ export const UI = {
     renderLandingPage() {
         const lastRoute = Storage.getLastRoute();
         const bookmarks = Storage.getBookmarks();
+        
         let bookmarksHtml = bookmarks.length > 0 ? bookmarks.map(b => `
             <div class="bookmark-item">
                 <a href="${b.url}">> ${b.title}</a>
-                <button class="bookmark-btn active" data-id="${b.title}" data-title="${b.title}" data-url="${b.url}">★</button>
+                <button class="bookmark-btn active" data-id="${b.title}" data-title="${b.title}" data-url="${b.url}" title="Remove Bookmark">★</button>
             </div>
         `).join('') : '<div class="empty-state">No bookmarks saved yet.</div>';
 
         this.root.innerHTML = `
             <div class="dashboard-layout">
-                <header class="dashboard-header" style="display: flex; justify-content: space-between; align-items: flex-start;">
-                    <div><h2>System Dashboard</h2><p>Track your 24-week intensive progress.</p></div>
-                    <a href="${lastRoute}" class="btn btn-primary">Resume Learning →</a>
-                </header>
-                <section class="stats-grid">
-                    <div class="stat-card"><span class="stat-label">Overall Progress</span><span class="stat-value" id="stat-overall">0%</span></div>
-                    <div class="stat-card"><span class="stat-label">Completed Tasks</span><span class="stat-value" id="stat-tasks">0</span></div>
-                </section>
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-xl);">
-                    <section class="tracks-grid" style="grid-template-columns: 1fr;">
-                        <div class="card"><div class="card-header"><span class="card-subtitle">Track A</span><h3 class="card-title">Full-Stack Engineering</h3></div><a href="#/track/track_a" class="btn btn-secondary btn-block">View Track A</a></div>
-                        <div class="card"><div class="card-header"><span class="card-subtitle">Track B</span><h3 class="card-title">AI / ML Engineering</h3></div><a href="#/track/track_b" class="btn btn-secondary btn-block">View Track B</a></div>
-                    </section>
-                    <div style="display: flex; flex-direction: column; gap: var(--spacing-xl);">
-                        <section class="card"><div class="card-header"><h3 class="card-title">Saved Bookmarks</h3></div><div class="bookmark-list">${bookmarksHtml}</div></section>
-                        <section class="card"><div class="card-header"><h3 class="card-title">Recent Activity</h3></div><div class="activity-list"><div class="empty-state">No recent activity found.</div></div></section>
+                
+                <section class="hero-section">
+                    <h1 class="hero-title">ENGINEER<br><span class="hero-highlight">FROM SCRATCH.</span></h1>
+                    <p class="hero-subtitle">The 24-week intensive protocol. Bridge the gap between distributed systems and applied autonomous AI.</p>
+                    <div class="hero-actions">
+                        <a href="${lastRoute}" class="btn btn-primary btn-large">Resume Protocol →</a>
                     </div>
-                </div>
-            </div>
-        `;
-        Progress.updateUI();
-        Bookmarks.init();
-    },
-
-    renderTracksPage() {
-        this.root.innerHTML = `
-            <div class="dashboard-layout">
-                <header class="dashboard-header"><h2>Curriculum Tracks</h2><p>Select a track to view its complete roadmap.</p></header>
-                <section class="tracks-grid">
-                    <a href="#/track/track_a" class="card" style="text-decoration: none;"><div class="card-header"><span class="card-subtitle">Track A</span><h3 class="card-title">Full-Stack Engineering</h3></div></a>
-                    <a href="#/track/track_b" class="card" style="text-decoration: none;"><div class="card-header"><span class="card-subtitle">Track B</span><h3 class="card-title">AI / ML Engineering</h3></div></a>
                 </section>
+
+                <section class="tracks-container">
+                    <div class="tracks-grid">
+                        <a href="#/track/track_a" class="track-card">
+                            <span class="track-badge">TRACK A</span>
+                            <h3 class="track-title">Full-Stack Engineering</h3>
+                            <p class="track-desc">APIs, PostgreSQL, strict typing, React, Next.js, and Dockerized infrastructure.</p>
+                        </a>
+                        <a href="#/track/track_b" class="track-card">
+                            <span class="track-badge">TRACK B</span>
+                            <h3 class="track-title">AI / ML Engineering</h3>
+                            <p class="track-desc">Neural architectures, RAG, autonomous agents, vLLM, and parameter-efficient fine-tuning.</p>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="tracking-section">
+                    <div class="tracking-grid">
+                        
+                        <div class="tracking-col">
+                            <h4 class="tracking-heading">System Status</h4>
+                            <div class="stats-minimal">
+                                
+                                <div class="stat-item">
+                                    <span class="stat-label">Overall Protocol Progress</span>
+                                    <div style="display: flex; align-items: center; gap: 1.5rem; margin-top: 0.5rem;">
+                                        <span class="stat-value" id="stat-overall">0%</span>
+                                        <div style="flex: 1; height: 4px; background: var(--border-color); border-radius: 2px; overflow: hidden; max-width: 250px;">
+                                            <div id="stat-progress-bar" style="height: 100%; width: 0%; background: var(--accent-color); transition: width 0.8s ease-out;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <span class="stat-label">Total Tasks Executed</span>
+                                    <span class="stat-value" id="stat-tasks" style="margin-top: 0.5rem;">0</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tracking-col">
+                            <h4 class="tracking-heading">Bookmarked Weeks</h4>
+                            <div class="bookmark-list minimal-bookmarks">${bookmarksHtml}</div>
+                        </div>
+
+                    </div>
+                </section>
+
             </div>
         `;
+        Progress.init(); // Triggers updateUI automatically to fill the bar
+        Bookmarks.init();
     },
 
     async renderTrackPage(trackId) {
         this.renderLoading();
         const data = await this.fetchTrackData(trackId);
         if (!data) return this.renderPlaceholder('Error loading data.');
-        const stagesHtml = data.stages.map(stage => `
-            <a href="#/roadmap/${trackId}/${stage.stageId}" class="stage-card">
-                <div class="stage-info"><h3>${stage.stageTitle}</h3></div>
+        
+        const stagesHtml = data.stages.map((stage, index) => `
+            <a href="#/roadmap/${trackId}/${stage.stageId}" class="stage-card" style="margin-bottom: var(--spacing-sm);">
+                <div class="stage-info">
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; display: block;">Stage ${index + 1}</span>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0;">${stage.stageTitle}</h3>
+                </div>
                 <div class="stage-meta"><span class="completion">${stage.weeks ? stage.weeks.length : 0} Weeks</span></div>
             </a>
         `).join('');
-        this.root.innerHTML = `<div class="track-layout"><header class="track-header"><h2>${data.trackName}</h2></header><div class="stage-list">${stagesHtml}</div></div>`;
+
+        this.root.innerHTML = `
+            <div class="track-layout">
+                <header class="track-header" style="margin-bottom: var(--spacing-lg);">
+                    <a href="#/" style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.8rem; text-decoration: underline; margin-bottom: var(--spacing-md); display: inline-block;">← Back to Curriculum</a>
+                    <h2 style="font-size: 2.5rem; margin-bottom: var(--spacing-xs);">${data.trackName}</h2>
+                    <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">Complete stages sequentially to master the track.</p>
+                </header>
+                <div class="stage-list" style="display: flex; flex-direction: column;">
+                    ${stagesHtml}
+                </div>
+            </div>
+        `;
     },
 
     async renderRoadmapPage(trackId, stageId) {
@@ -100,6 +144,11 @@ export const UI = {
             weeksHtml = stage.weeks.map((week, wIndex) => {
                 const isOpen = wIndex === 0 ? 'open' : ''; 
                 
+                // Construct the unique ID and clean title for week bookmarks
+                const weekIdCombined = `${trackId}_${stageId}_${week.weekId}`;
+                const shortStageName = stage.stageTitle.split(':')[0]; // E.g., "STAGE 1"
+                const weekBookmarkTitle = `${shortStageName} - ${week.weekTitle}`;
+
                 const conceptsHtml = (week.concepts || []).map((concept, cIndex) => `
                     <label class="checkbox-wrapper">
                         <input type="checkbox" class="checkbox-input" data-task-id="${trackId}_${stageId}_${week.weekId}_concept_${cIndex}">
@@ -164,27 +213,30 @@ export const UI = {
 
                 return `
                     <details class="expandable" ${isOpen}>
-                        <summary class="expandable-header">
-                            <div class="expandable-title">
-                                <span class="badge accent">Week ${wIndex + 1}</span>
-                                <h3>${week.weekTitle}</h3>
+                        <summary class="expandable-header" style="display: flex; align-items: center; justify-content: space-between; padding-right: 1rem; list-style: none;">
+                            <div class="expandable-title" style="display: flex; align-items: center; gap: 1rem; flex: 1;">
+                                <span class="badge accent" style="white-space: nowrap;">Week ${wIndex + 1}</span>
+                                <h3 style="margin: 0; font-size: 1.1rem;">${week.weekTitle}</h3>
                             </div>
-                            <span class="expandable-indicator">+</span>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <button class="bookmark-btn" data-id="${weekIdCombined}" data-title="${weekBookmarkTitle}" data-url="${currentUrl}" title="Bookmark Week">☆</button>
+                                <span class="expandable-indicator">+</span>
+                            </div>
                         </summary>
                         <div class="expandable-content">
                             <div class="week-container">
-                                <p class="week-focus">Focus: ${week.focus}</p>
+                                <p class="week-focus" style="margin-top: var(--spacing-sm); border-left: 2px solid var(--accent-color); padding-left: var(--spacing-sm);"><strong>Focus:</strong> ${week.focus}</p>
                                 ${conceptsHtml ? `<div class="content-block"><h4>> Concepts to Learn</h4>${conceptsHtml}</div>` : ''}
                                 ${microProjectsHtml ? `<div class="content-block"><h4>> Micro-Projects</h4>${microProjectsHtml}</div>` : ''}
                                 ${advProjectHtml ? `<div class="content-block"><h4>> Advanced Project</h4>${advProjectHtml}</div>` : ''}
                                 ${openSourceHtml ? `<div class="content-block"><h4>> Open Source</h4>${openSourceHtml}</div>` : ''}
                                 ${resourcesHtml ? `<div class="content-block"><h4>> Resources</h4>${resourcesHtml}</div>` : ''}
-                                <div class="content-block">
+                                <div class="content-block" style="border-top: 1px solid var(--border-color); padding-top: var(--spacing-md); margin-top: var(--spacing-lg);">
                                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-sm);">
                                         <h4>> Personal Notes</h4>
                                         <span id="note-status-${trackId}_${stageId}_${week.weekId}" style="font-size: 0.75rem; color: var(--accent-color); font-family: var(--font-mono); opacity: 0; transition: opacity var(--transition-fast);">Saved.</span>
                                     </div>
-                                    <textarea class="note-input search-input" data-note-id="${trackId}_${stageId}_${week.weekId}" rows="4" placeholder="Write markdown/text notes for this week..."></textarea>
+                                    <textarea class="note-input" data-note-id="${trackId}_${stageId}_${week.weekId}" rows="4" placeholder="Write markdown/text notes for this week..." style="width: 100%; background-color: var(--bg-color); border: 1px solid var(--border-color); color: var(--text-primary); padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--border-radius); font-family: var(--font-mono); font-size: 0.85rem; transition: border-color var(--transition-fast);"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -195,12 +247,9 @@ export const UI = {
 
         this.root.innerHTML = `
             <div class="roadmap-layout">
-                <header class="track-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
-                    <div>
-                        <a href="#/track/${trackId}" style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.8rem; text-decoration: underline;">← Back to Track Overview</a>
-                        <h2 style="margin-top: 1rem;">${stage.stageTitle}</h2>
-                    </div>
-                    <button class="bookmark-btn" data-id="${trackId}_${stageId}" data-title="${stage.stageTitle}" data-url="${currentUrl}" title="Bookmark Stage">☆</button>
+                <header class="track-header" style="margin-bottom: var(--spacing-lg);">
+                    <a href="#/track/${trackId}" style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.8rem; text-decoration: underline; margin-bottom: var(--spacing-md); display: inline-block;">← Back to ${data.trackName}</a>
+                    <h2 style="font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 0;">${stage.stageTitle}</h2>
                 </header>
                 <div class="roadmap-accordion">
                     ${weeksHtml || '<p style="color: var(--text-secondary); font-family: var(--font-mono);">No weeks defined yet.</p>'}
@@ -292,9 +341,7 @@ export const UI = {
     updateNav(activeHash) {
         document.querySelectorAll('.nav-link').forEach(link => {
             link.classList.remove('active');
-            if (activeHash === '/' && link.getAttribute('href') === '#/') {
-                link.classList.add('active');
-            } else if (activeHash !== '/' && activeHash.startsWith(link.getAttribute('href').replace('#', '')) && link.getAttribute('href') !== '#/') {
+            if (activeHash === '/settings' && link.getAttribute('data-route') === '/settings') {
                 link.classList.add('active');
             }
         });
