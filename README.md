@@ -1,13 +1,3 @@
-It looks like the Mermaid diagram in your README is failing to render because it is missing the closing triple backticks (```). This causes the rest of your markdown to be swallowed by the code block.
-
-
-
-Here is the fully corrected `README.md`. Replace your current file with this code:
-
-
-
-```markdown
-
 # ENGINEER FROM SCRATCH.
 
 **Full-Stack & AI Engineering Learning Platform**
