@@ -188,7 +188,3 @@ This application is 100% static and can be deployed for free in seconds:
 
 * **Vercel / Netlify:** Import the repository directly (leave all build commands empty).
 
-
-
-```
-
