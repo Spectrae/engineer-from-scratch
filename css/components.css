@@ -95,7 +95,6 @@
     width: 100%;
     margin-top: auto;
 }
-/* ... (Keep existing Cards, Progress Bars, Buttons from Stage 3) ... */
 
 /* Custom Checkboxes */
 .checkbox-wrapper {
@@ -167,7 +166,6 @@
     border-color: var(--accent-color);
     color: var(--accent-color);
 }
-/* ... (Keep existing styles from previous stages) ... */
 
 /* Search Bar */
 .search-container {

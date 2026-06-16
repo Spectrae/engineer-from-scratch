@@ -79,9 +79,7 @@
     font-size: 0.75rem;
     text-transform: uppercase;
 }
-/* ... (Keep existing Track Header and Stage List styles from Stage 4) ... */
 
-/* Expandable System (Details / Summary) */
 .expandable {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
