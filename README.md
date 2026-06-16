@@ -120,13 +120,9 @@ Because the application uses ES6 modules and the `fetch()` API for JSON data, it
 
 **Using Node.js:**
 
-
-
 ```bash
 
 npx serve .
-
-
 
 ```
 
@@ -134,17 +130,11 @@ npx serve .
 
 **Using Python:**
 
-
-
 ```bash
 
 python3 -m http.server 8000
 
-
-
 ```
-
-
 
 Then navigate to `http://localhost:8000` or the port provided by your terminal.
 
